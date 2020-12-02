@@ -1,25 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Texturina:wght@500&display=swap');
+
+html body {
+  background: white;
+}
+
+p {
+  color: #4d4e4e;
+  font-size: 1em;
+  letter-spacing: 1px;
+  line-height: 2;
+  font-family: 'Texturina';
+}
+
 .jumbotron.jumbotron-fluid {
   height: 100vh;
   background-color: transparent;
+  text-align: center;
   h1 {
+    font-family: 'Bungee', cursive;
+    text-align: center;
+    vertical-align: middle;
+    color: black;
+    // text-shadow: 3px 3px #ff95ff;
     font-size: 4em;
     margin-top: 25vh;
   }
 }
 
-.first {
+.letter-text {
+  margin-bottom: 15vh;
+}
+
+
+.gallery-memory-lane {
   display: flex;
-  height: 100vh;
   align-items: center;
-}
+  margin: 15vh 0;
+  img {
+    max-width: 100%;
+  }
+  .left-slide {
 
-h1 {
-  font-family: 'Bungee', cursive;
-  /* font-size: 5em; */
-  text-align: center;
-  vertical-align: middle;
-  /* width: 100vw; */
-  color: royalblue;
-  text-shadow: 5px 5px white;
+  }
 }
-

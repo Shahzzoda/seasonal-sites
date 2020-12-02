@@ -1,12 +1,12 @@
 import './App.scss';
-import AttentionSeeker from 'react-awesome-reveal';
+import { AttentionSeeker, Bounce } from 'react-awesome-reveal';
 
 function Landing() {
     return (
         <div className="jumbotron jumbotron-fluid">
-            <AttentionSeeker effect='flash'>
+            <Bounce>
                 <h1 className='h1'>Happy Holidays, <br /> Friend!</h1>
-            </AttentionSeeker>
+            </Bounce>
         </div>
     );
 }
