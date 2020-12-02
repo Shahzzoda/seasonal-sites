@@ -1,17 +1,24 @@
+.jumbotron.jumbotron-fluid {
+  height: 100vh;
+  background-color: transparent;
+  h1 {
+    font-size: 4em;
+    margin-top: 25vh;
+  }
+}
+
 .first {
   display: flex;
   height: 100vh;
   align-items: center;
-  background: lightskyblue;
 }
 
 h1 {
   font-family: 'Bungee', cursive;
-  font-size: 5em;
+  /* font-size: 5em; */
   text-align: center;
   vertical-align: middle;
-  padding: 0 2em 0 2em;
-  width: 100vw;
+  /* width: 100vw; */
   color: royalblue;
   text-shadow: 5px 5px white;
 }

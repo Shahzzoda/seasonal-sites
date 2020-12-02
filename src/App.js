@@ -1,9 +1,12 @@
-import './App.css';
+import './App.scss';
+import Landing from "./Landing"
+import Text from './Text'
 
 function App() {
   return (
-    <div className="first">
-      <h1>Happy Holidays, Friend!</h1>
+    <div className='container'>
+      <Landing />
+      <Text />
     </div>
   );
 }
