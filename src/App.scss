@@ -2,11 +2,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Texturina:wght@500&display=swap');
 
 html body {
-  background: white;
+  background: black;
 }
 
 p {
-  color: #4d4e4e;
+  color: #d3d3d3;
   font-size: 1em;
   letter-spacing: 1px;
   line-height: 2;
@@ -17,6 +17,8 @@ p {
   height: 100vh;
   background-color: transparent;
   text-align: center;
+  display: flex;
+  place-items: center;
   h1 {
     font-family: 'Bungee', cursive;
     text-align: center;
@@ -25,6 +27,9 @@ p {
     // text-shadow: 3px 3px #ff95ff;
     font-size: 4em;
     margin-top: 25vh;
+  }
+  img {
+    max-width: 100%;
   }
 }
 
