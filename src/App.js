@@ -1,6 +1,4 @@
 import './App.scss';
-// import Landing from "./Landing"
-// import Text from './Text'
 import { Zoom, Bounce, Slide } from 'react-awesome-reveal'
 import useSound from 'use-sound';
 import confettiSound from './sounds/party-horn.wav'
