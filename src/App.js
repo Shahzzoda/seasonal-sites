@@ -2,7 +2,8 @@ import "./App.scss";
 import { Zoom, Bounce, Slide } from "react-awesome-reveal";
 import confettiSound from "./sounds/party-horn.wav";
 import MemoryLane from "./Components/MemoryLane";
-import { imgTxt } from "./Data/imgTxtData";
+import Banner from "./Components/Banner";
+import { imgTxt, bannerData } from "./Data/imgTxtData";
 import React from "react";
 
 const App = () => {
@@ -12,18 +13,7 @@ const App = () => {
 
   return (
     <div className="container" onClick={() => sound.play()}>
-      <Bounce triggerOnce>
-        <div className="jumbotron jumbotron-fluid">
-          {/* <h1 className='h1'>Happy Holidays, <br /> Friend!</h1> */}
-          <span>
-            <div className="banner">
-              <img src="banner.png" alt={"Happy New Year!!"} />
-            </div>
-            <p>Hey you! Hope you have a great holiday season this year.</p>
-          </span>
-        </div>
-      </Bounce>
-
+      <Banner img={bannerData.image} txt={bannerData.text} />
       <div className="letter-text">
         <Zoom triggerOnce>
           <p>Dear Friend,</p>

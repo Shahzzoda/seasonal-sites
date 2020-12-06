@@ -24,4 +24,9 @@ const imgTxt = [
   },
 ];
 
-module.exports = { imgTxt };
+const bannerData = {
+  image: "banner.png",
+  text: "Hey you! Hope you have a great holiday season this year.",
+};
+
+module.exports = { imgTxt, bannerData };
