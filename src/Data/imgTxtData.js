@@ -1,3 +1,4 @@
+// Data for MemoryLane component (add as many or as little as needed)
 const imgTxt = [
   {
     image: `https://image.kpopmap.com/2019/10/Kim-Soohyun-cover-DPC.jpg`,
@@ -17,11 +18,13 @@ const imgTxt = [
   },
 ];
 
+// Data for Banner component
 const bannerData = {
   image: `banner.png`,
   text: `Hey you! Hope you have a great holiday season this year.`,
 };
 
+// Data for LetterMessage component
 const letterMsg = {
   greeting: `Dear Friend,`,
   body: ` Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
@@ -33,4 +36,12 @@ const letterMsg = {
    Aldus PageMaker including versions of Lorem Ipsum.`,
 };
 
-module.exports = { imgTxt, bannerData,letterMsg };
+// Data for FarewellMessage component
+const farewellMsg = {
+  image: `goodbye.png`,
+  body: ` For your presence this year! Wishing your love, health, and
+  happiness.`,
+};
+
+// Export all json
+module.exports = { imgTxt, bannerData, letterMsg, farewellMsg };

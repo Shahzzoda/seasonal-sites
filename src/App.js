@@ -1,16 +1,21 @@
+// Animations, css and asset imports
 import "./App.scss";
-import { Zoom, Bounce, Slide } from "react-awesome-reveal";
+import React from "react";
+import { Slide } from "react-awesome-reveal";
 import confettiSound from "./sounds/party-horn.wav";
+// Componenet imports
 import MemoryLane from "./Components/MemoryLane";
 import Banner from "./Components/Banner";
 import LetterMessage from "./Components/LetterMessage";
-import { imgTxt, bannerData, letterMsg } from "./Data/imgTxtData";
-import React from "react";
+import FarewellMessage from "./Components/FarewellMessage";
+// Data imports
+import { imgTxt, bannerData, letterMsg, farewellMsg } from "./Data/imgTxtData";
+
 
 const App = () => {
   // initialize Sound object
   const sound = new Audio(confettiSound);
-  let img_on_right = true;
+  let img_on_right = false;
 
   return (
     <div className="container" onClick={() => sound.play()}>
@@ -25,7 +30,7 @@ const App = () => {
           return (
             <MemoryLane
               key={e.image}
-              image={e.image}
+              img={e.image}
               text={e.text}
               img_on_right={img_on_right}
             />
@@ -33,18 +38,11 @@ const App = () => {
         })}
       </Slide>
 
-      <div className="jumbotron jumbotron-fluid">
-        {/* <h1 className='h1'>Thank you!</h1> */}
-        <span>
-          <div className="banner">
-            <img src="goodbye.png" alt={"Goodbye"} />
-          </div>
-          <p>
-            For your presence this year! Wishing your love, health, and
-            happiness.
-          </p>
-        </span>
-      </div>
+      <FarewellMessage
+        img={farewellMsg.image}
+        body={farewellMsg.body}
+        alt={"goodbye"}
+      />
     </div>
   );
 };
