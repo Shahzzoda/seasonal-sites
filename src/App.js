@@ -3,7 +3,8 @@ import { Zoom, Bounce, Slide } from "react-awesome-reveal";
 import confettiSound from "./sounds/party-horn.wav";
 import MemoryLane from "./Components/MemoryLane";
 import Banner from "./Components/Banner";
-import { imgTxt, bannerData } from "./Data/imgTxtData";
+import LetterMessage from "./Components/LetterMessage";
+import { imgTxt, bannerData, letterMsg } from "./Data/imgTxtData";
 import React from "react";
 
 const App = () => {
@@ -14,22 +15,7 @@ const App = () => {
   return (
     <div className="container" onClick={() => sound.play()}>
       <Banner img={bannerData.image} txt={bannerData.text} />
-      <div className="letter-text">
-        <Zoom triggerOnce>
-          <p>Dear Friend,</p>
-          <p>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book. It has survived not
-            only five centuries, but also the leap into electronic typesetting,
-            remaining essentially unchanged. It was popularised in the 1960s
-            with the release of Letraset sheets containing Lorem Ipsum passages,
-            and more recently with desktop publishing software like Aldus
-            PageMaker including versions of Lorem Ipsum.
-          </p>
-        </Zoom>
-      </div>
+      <LetterMessage greeting={letterMsg.greeting} body={letterMsg.body} />
 
       {/* Render Pictures and text in alternating manner */}
       <Slide cascade triggerOnce>
