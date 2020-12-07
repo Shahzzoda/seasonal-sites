@@ -1,23 +1,18 @@
-import logo from './logo.svg';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <img src="hat.png" className="hat hat-1" alt="christmas hat falling" />
+      <img src="hat.png" className="hat hat-2" alt="christmas hat falling" />
+      <img src="hat.png" className="hat hat-3" alt="christmas hat falling" />
+      <img src="hat.png" className="hat hat-4" alt="christmas hat falling" />
+      <img src="hat.png" className="hat hat-5" alt="christmas hat falling" />
+      <img src="hat.png" className="hat hat-6" alt="christmas hat falling" />
+      <img src="hat.png" className="hat hat-7" alt="christmas hat falling" />
+      <img src="hat.png" className="hat hat-8" alt="christmas hat falling" />
+      <img src="hat.png" className="hat hat-9" alt="christmas hat falling" />
+      <img src="hat.png" className="hat hat-10" alt="christmas hat falling" />
     </div>
   );
 }

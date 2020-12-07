@@ -1,38 +1,96 @@
+.hat {
+  width: 100px;
+  height: 100px;
+  animation-name: hat-falling;
+  animation-fill-mode: backwards;
+  position: relative;
+  top: -100px;
+  display: inline-block;
+  animation-iteration-count: 1;
+}
+
+.hat-1 {
+  animation-duration: 2s;
+  animation-delay: 1.3s;
+}
+
+.hat-2 {
+  animation-duration: 3s;
+  animation-delay: 1s;
+}
+
+.hat-3 {
+  animation-duration: 4s;
+  animation-delay: 2s;
+}
+
+.hat-4 {
+  animation-duration: 3s;
+  animation-delay: 4s;
+}
+
+.hat-5 {
+  animation-duration: 2s;
+}
+
+.hat-6 {
+  animation-duration: 3s;
+  animation-delay:2s
+}
+
+.hat-7 {
+  animation-duration: 1.5s;
+  animation-delay:2.4s;
+}
+
+.hat-8 {
+  animation-duration: 2.5s;
+  animation-delay:4s
+}
+
+.hat-9 {
+  animation-duration: 2s;
+  animation-delay:2s;
+}
+
+.hat-10 {
+  animation-duration: 2.5s;
+  animation-delay: 1.5s;
+}
+
+
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+    justify-content: space-between;
 }
 
 .App-link {
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
+@keyframes hat-falling {
+  0% {
+    top: -100px;
     transform: rotate(0deg);
   }
-  to {
-    transform: rotate(360deg);
+  25% {
+    transform: rotate(-70deg);
+  }
+  50% {
+    transform: rotate(90deg);
+  }/*
+  70% {
+    transform: rotate(-30deg);
+  } */
+  100%{
+    top: 100vh;
+    display: none;
+    transform: rotate(0deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .img.hat-1  {
+    animation: App-logo-spin infinite 20s linear;
   }
 }
