@@ -1,14 +1,46 @@
 @import url('https://fonts.googleapis.com/css2?family=Oleo+Script:wght@700&display=swap');
 
+html, body, .container {
+  width: 100vw;
+  min-height: 100vh;
+}
+
+html  {
+  background-color: green;
+}
+
+body {
+  background: transparent;
+}
+
+.intro-words {
+  text-align: center;
+}
+
+h1 {
+  font-family: 'Oleo Script', cursive;
+  color: #f5f7da;
+  /* font-size: 5em; */
+}
+
 /* Falling Hats */
+.hat-rack {
+  display: flex;
+  justify-content: space-between;
+  width: 100vw;
+  flex-wrap: wrap;
+  position: absolute;
+  top: -100vh;
+}
+
 .hat {
   display: inline-block;
-  width: 100px;
-  height: 100px;
+  max-width: 25vw;
+  max-height: 25vw;
   animation-name: hat-falling;
-  animation-fill-mode: backwards;
+  /* animation-fill-mode: forwards; */
   position: relative;
-  top: -100px;
+  top: -25vw;
 }
 
 .hat-1 {
@@ -60,12 +92,6 @@
   animation-delay: 0.5s;
 }
 
-.App {
-  display: flex;
-  justify-content: space-between;
-  width: 100vw;
-}
-
 @keyframes hat-falling {
   0% {
     top: -100px;
@@ -74,9 +100,8 @@
     transform: rotate(-40deg);
   }
   100%{
-    top: 100vh;
+    top: 200vh;
     display: none;
     transform: rotate(40deg);
   }
 }
-
