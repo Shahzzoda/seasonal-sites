@@ -20,7 +20,15 @@ body {
 h1 {
   font-family: 'Oleo Script', cursive;
   color: #f5f7da;
-  /* font-size: 5em; */
+  font-size: 10vw;
+  text-shadow: 5px 0 #960000;
+  padding: 5vw
+}
+
+.container {
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
 }
 
 /* Falling Hats */
@@ -104,4 +112,55 @@ h1 {
     display: none;
     transform: rotate(40deg);
   }
+}
+
+/* Lights */
+.lights {
+  position: absolute;
+  height: 10vh;
+}
+.left {
+  left: 0;
+}
+.right {
+  right: 0;
+}
+
+.lights-1 {
+  top: 0vh;
+}
+
+.lights-2 {
+  top: 10vh;
+}
+
+.lights-3 {
+  top: 20vh;
+}
+
+.lights-4 {
+  top: 30vh;
+}
+
+.lights-5 {
+  top: 40vh;
+}
+.lights-6 {
+  top: 50vh;
+}
+
+.lights-7 {
+  top: 60vh;
+}
+
+.lights-8 {
+  top: 70vh;
+}
+
+.lights-9 {
+  top: 80vh;
+}
+
+.lights-10 {
+  top: 90vh;
 }
