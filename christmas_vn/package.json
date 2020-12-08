@@ -14,7 +14,6 @@
     "build": "react-scripts build"
   },
   "eslintConfig": {
-    "cache": false,
     "extends": [
       "react-app"
     ]
