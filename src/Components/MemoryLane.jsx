@@ -1,15 +1,15 @@
 import React from "react";
 
-// Component renders image and text alternating left and right 
-const MemoryLane = ({ image, text, img_on_right }) => {
+// Component renders image and text alternating left and right
+const MemoryLane = ({ img, text, img_on_right }) => {
   if (img_on_right) {
     return (
       <div className="row gallery-memory-lane">
         <div className="col-6">
-          <img className=" left-slide" src={image} alt={"placeholder"} />
+          <p>{text}</p>
         </div>
         <div className="col-6">
-          <p>{text}</p>
+          <img className=" left-slide" src={img} alt={"placeholder"} />
         </div>
       </div>
     );
@@ -17,10 +17,10 @@ const MemoryLane = ({ image, text, img_on_right }) => {
     return (
       <div className="row gallery-memory-lane">
         <div className="col-6">
-          <p>{text}</p>
+          <img className=" left-slide" src={img} alt={"placeholder"} />
         </div>
         <div className="col-6">
-          <img className=" left-slide" src={image} alt={"placeholder"} />
+          <p>{text}</p>
         </div>
       </div>
     );
