@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Oleo+Script:wght@700&display=swap');
+
+html, body, .container {
+  width: 100vw;
+  min-height: 100vh;
+}
+
+
+.intro-words {
+  text-align: center;
+}
+
+h1 {
+  font-family: 'Oleo Script', cursive;
+  color: #f5f7da;
+  font-size: 10vw;
+  text-shadow: 5px 0 #960000;
+  padding: 5vw
+}
+
+.container {
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+}
+
+/* Falling Hats */
+.hat-rack {
+  display: flex;
+  justify-content: space-between;
+  width: 100vw;
+  flex-wrap: wrap;
+  position: absolute;
+  top: -100vh;
+}
+
+.hat {
+  display: inline-block;
+  max-width: 25vw;
+  max-height: 25vw;
+  animation-name: hat-falling;
+  /* animation-fill-mode: forwards; */
+  position: relative;
+  top: -25vw;
+}
+
+.hat-1 {
+  animation-duration: 2s;
+  animation-delay: 0.4s;
+}
+
+.hat-2 {
+  animation-duration: 3s;
+  animation-delay: 1.5s;
+}
+
+.hat-3 {
+  animation-duration: 4s;
+  animation-delay: 1s;
+}
+
+.hat-4 {
+  animation-duration: 3s;
+}
+
+.hat-5 {
+  animation-duration: 5s;
+  animation-delay: 0.2s;
+}
+
+.hat-6 {
+  animation-duration: 3s;
+  animation-delay: 0.3s
+}
+
+.hat-7 {
+  animation-duration: 1.5s;
+  animation-delay: 1s;
+}
+
+.hat-8 {
+  animation-duration: 2.5s;
+  animation-delay: 0.6s
+}
+
+.hat-9 {
+  animation-duration: 3s;
+  animation-delay: 1s;
+}
+
+.hat-10 {
+  animation-duration: 2.5s;
+  animation-delay: 0.5s;
+}
+
+@keyframes hat-falling {
+  0% {
+    top: -100px;
+  }
+  33% {
+    transform: rotate(-40deg);
+  }
+  100%{
+    top: 200vh;
+    display: none;
+    transform: rotate(40deg);
+  }
+}
+
+/* Lights */
+.lights {
+  position: absolute;
+  height: 10vh;
+}
+.left {
+  left: 0;
+}
+.right {
+  right: 0;
+}
+
+.lights-1 {
+  top: 0vh;
+}
+
+.lights-2 {
+  top: 10vh;
+}
+
+.lights-3 {
+  top: 20vh;
+}
+
+.lights-4 {
+  top: 30vh;
+}
+
+.lights-5 {
+  top: 40vh;
+}
+.lights-6 {
+  top: 50vh;
+}
+
+.lights-7 {
+  top: 60vh;
+}
+
+.lights-8 {
+  top: 70vh;
+}
+
+.lights-9 {
+  top: 80vh;
+}
+
+.lights-10 {
+  top: 90vh;
+}

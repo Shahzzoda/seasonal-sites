@@ -1,4 +1,8 @@
-// Data for MemoryLane component (add as many or as little as needed)
+/**
+ * This file should only contain data for the New year themed Page
+ */
+
+// Add image and text for <MemoryLane/> component (add as many or as little as needed)
 const imgTxt = [
   {
     image: `https://image.kpopmap.com/2019/10/Kim-Soohyun-cover-DPC.jpg`,
@@ -18,13 +22,13 @@ const imgTxt = [
   },
 ];
 
-// Data for Banner component
+// Add image and text for <Banner/> component
 const bannerData = {
   image: `banner.png`,
   text: `Hey you! Hope you have a great holiday season this year.`,
 };
 
-// Data for LetterMessage component
+// Add text <LetterMessage/> component
 const letterMsg = {
   greeting: `Dear Friend,`,
   body: ` Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
@@ -36,7 +40,7 @@ const letterMsg = {
    Aldus PageMaker including versions of Lorem Ipsum.`,
 };
 
-// Data for FarewellMessage component
+// Add image and text for <FarewellMessage/> component
 const farewellMsg = {
   image: `goodbye.png`,
   body: ` For your presence this year! Wishing your love, health, and
