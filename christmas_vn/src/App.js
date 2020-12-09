@@ -21,7 +21,7 @@ function App() {
 
       <div className='row gallery-memory-lane'>
         <div className='col-6'>
-          <img className=' left-slide' src='https://image.kpopmap.com/2019/10/Kim-Soohyun-cover-DPC.jpg' />
+          <img className=' left-slide' src='1.png' />
         </div>
         <div className='col-6'>
           <p>It has survived not only five centuries, but also the leap into electronic typesetting...</p>
@@ -32,12 +32,12 @@ function App() {
           <p>It has survived not only five centuries, but also the leap into electronic typesetting...</p>
         </div>
         <div className='col-6'>
-          <img className=' left-slide' src='https://6.vikiplatform.com/image/f8c6d1cc43b34859a6239da0c771d5d3.jpg?x=b&a=0x0&s=460x268&e=t&f=t&cb=1' />
+          <img className='left-slide' src='2.png' />
         </div>
       </div>
       <div className='row gallery-memory-lane'>
         <div className='col-6'>
-          <img className=' left-slide' src='https://www.sbs.com.au/popasia/sites/sbs.com.au.popasia/files/styles/full/public/kimsoohyun.png?itok=tiUXbSom&mtime=1581034913' />
+          <img className='left-slide' src='3.png' />
         </div>
         <div className='col-6'>
           <p>It has survived not only five centuries, but also the leap into electronic typesetting...</p>
@@ -48,7 +48,7 @@ function App() {
           <p>It has survived not only five centuries, but also the leap into electronic typesetting...</p>
         </div>
         <div className='col-6'>
-          <img className=' left-slide' src='https://lh3.googleusercontent.com/9vvN5l6Ckbpgk_kEGNs46uFw6EzKXsbNoTqkcHATdxTBu0hYbH02YJX4hBdmZT1L6tV7Ryr8WvdCHkFbXwTK4FlkCEn13tU2=w1200-h630-rj-pp-e365' />
+          <img className='left-slide' src='4.jpg' />
         </div>
       </div>
 
