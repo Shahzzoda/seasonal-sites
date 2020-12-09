@@ -20,6 +20,8 @@ body {
   flex-direction: column;
   display: flex;
   justify-content: center;
+  /* 11 vw bc width of light is 10vw */
+  padding: 0 11vw; 
 }
 
 .intro-words {
@@ -47,10 +49,10 @@ body {
 
 .letter-content {
   margin-bottom: 10vh;
-  padding: 0 11vw;
 }
 
-.letter-content p {
+.letter-content p,
+.gallery-memory-lane p {
   font-family: 'Permanent Marker', cursive;
   color: #f5f7da;
   font-size: 1em;
@@ -77,6 +79,16 @@ body {
     position: relative;
     left: 110vw;
   }
+}
+
+.gallery-memory-lane {
+  display: flex;
+  align-items: center;
+  margin: 5vh 0;
+}
+
+img {
+  max-width: 100%;
 }
 
 /* Falling Hats */
