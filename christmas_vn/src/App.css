@@ -98,6 +98,13 @@ img {
   }
 }
 
+/* Large font changes */
+@media (max-device-width: 440px) and (min-device-height: 360px) {
+  .intro-words h1 {
+    font-size: 6vh;
+  }
+}
+
 /* Falling Hats */
 .hat-rack {
   display: flex;
