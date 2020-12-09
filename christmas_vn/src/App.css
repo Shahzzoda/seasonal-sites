@@ -103,6 +103,11 @@ img {
   .intro-words h1 {
     font-size: 6vh;
   }
+  .letter-content p, 
+  .gallery-memory-lane p {
+    font-size: 2vh;
+    line-height: 2;
+  }
 }
 
 /* Falling Hats */
