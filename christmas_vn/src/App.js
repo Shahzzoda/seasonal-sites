@@ -38,25 +38,7 @@ function App() {
 
       {/* NOTE: these are temp! and will be replaced by one or two pngs when site is done */}
       <img src="lights.png" className="lights left lights-1" alt="christmas lights" />
-      <img src="lights.png" className="lights left lights-2" alt="christmas lights" />
-      <img src="lights.png" className="lights left lights-3" alt="christmas lights" />
-      <img src="lights.png" className="lights left lights-4" alt="christmas lights" />
-      <img src="lights.png" className="lights left lights-5" alt="christmas lights" />
-      <img src="lights.png" className="lights left lights-6" alt="christmas lights" />
-      <img src="lights.png" className="lights left lights-7" alt="christmas lights" />
-      <img src="lights.png" className="lights left lights-8" alt="christmas lights" />
-      <img src="lights.png" className="lights left lights-9" alt="christmas lights" />
-      <img src="lights.png" className="lights left lights-10" alt="christmas lights" />
       <img src="lights.png" className="lights right lights-1" alt="christmas lights" />
-      <img src="lights.png" className="lights right lights-2" alt="christmas lights" />
-      <img src="lights.png" className="lights right lights-3" alt="christmas lights" />
-      <img src="lights.png" className="lights right lights-4" alt="christmas lights" />
-      <img src="lights.png" className="lights right lights-5" alt="christmas lights" />
-      <img src="lights.png" className="lights right lights-6" alt="christmas lights" />
-      <img src="lights.png" className="lights right lights-7" alt="christmas lights" />
-      <img src="lights.png" className="lights right lights-8" alt="christmas lights" />
-      <img src="lights.png" className="lights right lights-9" alt="christmas lights" />
-      <img src="lights.png" className="lights right lights-10" alt="christmas lights" />
     </div>
   );
 }
