@@ -1,8 +1,10 @@
 import './App.css';
 
 function App() {
+  const sound = new Audio('bells-trimmed.m4a');
+
   return (
-    <div className="container">
+    <div className="container" onClick={() => sound.play()}>
       <div className="intro-words">
         <h1>Merry Christmas, Ya Filthy Animal!</h1>
         <p>From: Shahzoda</p>
