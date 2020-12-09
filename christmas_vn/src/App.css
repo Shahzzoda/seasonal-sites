@@ -1,8 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Oleo+Script:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap');
+
 
 html, body, .container {
   width: 100vw;
   min-height: 100vh;
+  overflow-x: hidden;
 }
 
 html  {
@@ -13,40 +16,85 @@ body {
   background: transparent;
 }
 
-.intro-words {
-  text-align: center;
-}
-
-h1 {
-  font-family: 'Oleo Script', cursive;
-  color: #f5f7da;
-  font-size: 10vw;
-  text-shadow: 5px 0 #960000;
-  padding: 5vw
-}
-
 .container {
   flex-direction: column;
   display: flex;
   justify-content: center;
 }
 
+.intro-words {
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.intro-words h1 {
+  font-family: 'Oleo Script', cursive;
+  color: #f5f7da;
+  font-size: 10vh;
+  text-shadow: 5px 0 #960000;
+  padding: 5vw
+}
+
+.intro-words p {
+  line-height: 1;
+  font-family: monospace;
+  color: #f5f7da;
+  letter-spacing: 1px;
+}
+
+
+.letter-content {
+  margin-bottom: 10vh;
+  padding: 0 6vw;
+}
+
+.letter-content p {
+  font-family: 'Nanum Pen Script', cursive;
+  color: #f5f7da;
+  font-size: 1em;
+  letter-spacing: 1px;
+  line-height: 2;
+}
+
+.santa-holder img {
+  position: relative;
+  left: -100vw;
+  animation-name: santa-go-brr;
+  animation-play-state: running;
+  animation-duration: 15000ms;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes santa-go-brr {
+  from {
+    position: relative;
+    left: -100vw;
+  }
+  to {
+    position: relative;
+    left: 110vw;
+  }
+}
+
 /* Falling Hats */
 .hat-rack {
   display: flex;
   justify-content: space-between;
-  width: 100vw;
   flex-wrap: wrap;
   position: absolute;
-  top: -100vh;
+  top: -200vh;
 }
 
 .hat {
-  display: inline-block;
   max-width: 25vw;
   max-height: 25vw;
   animation-name: hat-falling;
   /* animation-fill-mode: forwards; */
+  animation-timing-function: linear;
   position: relative;
   top: -25vw;
 }
@@ -103,14 +151,18 @@ h1 {
 @keyframes hat-falling {
   0% {
     top: -100px;
+    display: inline-block;
+    transform: rotate(0deg);
   }
   33% {
     transform: rotate(-40deg);
   }
-  100%{
-    top: 200vh;
-    display: none;
+  66% {
     transform: rotate(40deg);
+  }
+  100%{
+    top: 300vh;
+    transform: rotate(0deg);
   }
 }
 
