@@ -21,7 +21,7 @@ body {
   display: flex;
   justify-content: center;
   /* 11 vw bc width of light is 10vw */
-  padding: 0 11vw; 
+  padding: 0 12vw; 
 }
 
 .intro-words {
@@ -56,10 +56,11 @@ body {
   font-family: 'Permanent Marker', cursive;
   color: #f5f7da;
   font-size: 1em;
-  letter-spacing: 2px;
-  line-height: 2;
+  letter-spacing: 1px;
+  line-height: 3;
 }
 
+/* santa  */
 .santa-holder img {
   position: relative;
   left: -100vw;
@@ -80,15 +81,21 @@ body {
     left: 110vw;
   }
 }
-
+/* img galleries  */
 .gallery-memory-lane {
   display: flex;
   align-items: center;
-  margin: 5vh 0;
+  margin: 0 5vh;
 }
 
 img {
   max-width: 100%;
+}
+
+@media (max-device-width: 760px) {
+  .gallery-memory-lane.reverse {
+    flex-direction: column-reverse;
+  }
 }
 
 /* Falling Hats */

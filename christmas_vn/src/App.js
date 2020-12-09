@@ -20,35 +20,35 @@ function App() {
       </div>
 
       <div className='row gallery-memory-lane'>
-        <div className='col-6'>
-          <img className=' left-slide' src='1.png' />
+        <div className='col-md-4'>
+          <img className='left-slide' src='1.png' />
         </div>
-        <div className='col-6'>
+        <div className='col-md-8'>
           <p>It has survived not only five centuries, but also the leap into electronic typesetting...</p>
         </div>
       </div>
-      <div className='row gallery-memory-lane'>
-        <div className='col-6'>
+      <div className='row gallery-memory-lane reverse'>
+        <div className='col-md-8'>
           <p>It has survived not only five centuries, but also the leap into electronic typesetting...</p>
         </div>
-        <div className='col-6'>
+        <div className='col-md-4'>
           <img className='left-slide' src='2.png' />
         </div>
       </div>
       <div className='row gallery-memory-lane'>
-        <div className='col-6'>
+        <div className='col-md-4'>
           <img className='left-slide' src='3.png' />
         </div>
-        <div className='col-6'>
+        <div className='col-md-8'>
           <p>It has survived not only five centuries, but also the leap into electronic typesetting...</p>
         </div>
       </div>
-      <div className='row gallery-memory-lane'>
-        <div className='col-6'>
+      <div className='row gallery-memory-lane reverse'>
+        <div className='col-md-8'>
           <p>It has survived not only five centuries, but also the leap into electronic typesetting...</p>
         </div>
-        <div className='col-6'>
-          <img className='left-slide' src='4.jpg' />
+        <div className='col-md-4'>
+          <img className='left-slide' src='4.png' />
         </div>
       </div>
 
