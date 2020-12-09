@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Oleo+Script:wght@700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
 
 
 html, body, .container {
@@ -45,17 +45,16 @@ body {
   letter-spacing: 1px;
 }
 
-
 .letter-content {
   margin-bottom: 10vh;
-  padding: 0 6vw;
+  padding: 0 11vw;
 }
 
 .letter-content p {
-  font-family: 'Nanum Pen Script', cursive;
+  font-family: 'Permanent Marker', cursive;
   color: #f5f7da;
   font-size: 1em;
-  letter-spacing: 1px;
+  letter-spacing: 2px;
   line-height: 2;
 }
 
@@ -87,6 +86,8 @@ body {
   flex-wrap: wrap;
   position: absolute;
   top: -200vh;
+  max-width: 100vw;
+  padding: 0 5vw;
 }
 
 .hat {
@@ -100,52 +101,52 @@ body {
 }
 
 .hat-1 {
-  animation-duration: 2s;
-  animation-delay: 0.4s;
+  animation-duration: 1200ms;
+  animation-delay: 400ms;
 }
 
 .hat-2 {
-  animation-duration: 3s;
-  animation-delay: 1.5s;
+  animation-duration: 1700ms;
+  animation-delay: 500ms;
 }
 
 .hat-3 {
-  animation-duration: 4s;
-  animation-delay: 1s;
+  animation-duration: 2000ms;
+  animation-delay: 100ms;
 }
 
 .hat-4 {
-  animation-duration: 3s;
+  animation-duration: 1700ms;
 }
 
 .hat-5 {
-  animation-duration: 5s;
-  animation-delay: 0.2s;
+  animation-duration: 1300ms;
+  animation-delay: 200s;
 }
 
 .hat-6 {
-  animation-duration: 3s;
-  animation-delay: 0.3s
+  animation-duration: 1000ms;
+  animation-delay: 300ms
 }
 
 .hat-7 {
-  animation-duration: 1.5s;
-  animation-delay: 1s;
+  animation-duration: 2000ms;
+  animation-delay: 600ms;
 }
 
 .hat-8 {
-  animation-duration: 2.5s;
-  animation-delay: 0.6s
+  animation-duration: 1050ms;
+  animation-delay: 100ms
 }
 
 .hat-9 {
-  animation-duration: 3s;
-  animation-delay: 1s;
+  animation-duration: 1100ms;
+  animation-delay: 900ms;
 }
 
 .hat-10 {
-  animation-duration: 2.5s;
-  animation-delay: 0.5s;
+  animation-duration: 2000s;
+  animation-delay: 800s;
 }
 
 @keyframes hat-falling {

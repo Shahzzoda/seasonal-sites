@@ -9,9 +9,7 @@ function App() {
         <p>To: Siam </p>
       </div>
       <div className="letter-content">
-        <p>
-          Dear Siam,
-        </p>
+        <p>Dear Siam,</p>
         <p>
           Quis exercitation ad ad elit dolor. Commodo duis minim deserunt incididunt mollit dolore velit aliqua excepteur nisi. Irure ipsum commodo pariatur reprehenderit fugiat nulla dolore nulla quis. Ex adipisicing Lorem incididunt labore ea laborum aute anim in proident culpa duis velit veniam. Anim minim aute sunt eiusmod et eiusmod. Ut mollit minim aliqua duis exercitation labore. Dolor nulla labore id aliqua fugiat id magna occaecat nulla voluptate nulla duis.
         </p>
@@ -19,9 +17,6 @@ function App() {
           <img src="santa-pepe.gif" alt="pepe santa" />
         </div>
       </div>
-
-
-
 
       <div className="hat-rack">
         <img src="hat.png" className="hat hat-1" alt="christmas hat falling" />
