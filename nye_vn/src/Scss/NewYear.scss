@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Bungee&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Mr+Bedfort&display=swap');
 @import url("https://fonts.googleapis.com/css2?family=Texturina:wght@500&display=swap");
 
 body {
@@ -18,15 +18,17 @@ p {
   background-color: transparent;
   text-align: center;
   display: flex;
-  place-items: center;
+  flex-direction: column;
+  justify-content: center;
   h1 {
-    font-family: "Bungee", cursive;
+    font-family: 'Mr Bedfort', cursive;
     text-align: center;
     vertical-align: middle;
-    color: black;
-    // text-shadow: 3px 3px #ff95ff;
     font-size: 4em;
     margin-top: 25vh;
+    letter-spacing: 3px;
+    color: #fffbe6;
+    text-shadow: 0 0 5px #ffffcc, 0 0 8px #ffb500, 0 0 11px yellow;
   }
   img {
     max-width: 100%;
