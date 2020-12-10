@@ -1,6 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Bungee&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Texturina:wght@500&display=swap");
 
+body {
+  cursor: url(stick.png), auto;
+}
 
 p {
   color: #d3d3d3;
@@ -40,5 +43,87 @@ p {
   margin: 15vh 0;
   img {
     max-width: 100%;
+  }
+}
+
+// For sparklinbg cursor effect
+.cursor {
+  position:absolute;
+  animation-name: spin;
+  animation-duration: 500ms;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  pointer-events: none;
+  transition-timing-function: ease-out;
+  transition-delay: 0;
+
+  &.cursor1 {
+    width: 90px;
+    height: 90px;
+    transition-duration: 0ms;
+    img {
+      width: 90px;
+      height: 90px;
+    }
+  }
+
+  &.cursor2 {
+    width: 50px;
+    height: 50px;
+    transition-duration: 10ms;
+    img {
+      width: 50px;
+      height: 50px;
+    }
+  }
+
+  &.cursor3 {
+    width: 50px;
+    height: 50px;
+    transition-duration: 13ms;
+    img {
+      width: 50px;
+      height: 50px;
+    }
+  }
+
+  &.cursor4 {
+    width: 30px;
+    height: 30px;
+    transition-duration: 11ms;
+    img{
+      width: 30px;
+      height: 30px;
+    }
+  }
+
+  &.cursor5 {
+    width: 20px;
+    height: 20px;
+    transition-duration: 12ms;
+    img{
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  &.cursor6 {
+    width: 35px;
+    height: 35px;
+    transition-duration: 13ms;
+    img{
+      width: 35px;
+      height: 35px;
+    }
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(0deg);
+  }
+  from {
+    transform: rotate(360deg);
+    
   }
 }

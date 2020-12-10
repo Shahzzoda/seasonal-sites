@@ -1,6 +1,6 @@
 // Value can be toggle to Christmas || New Year
-const theme = "Christmas";
+const theme = "New Year";
 
 
 
-module.exports = {theme}
+module.exports = { theme }

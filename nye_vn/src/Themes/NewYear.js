@@ -17,8 +17,16 @@ const NewYear = () => {
   const sound = new Audio(confettiSound);
   let img_on_right = false;
 
+  let handleMouseMovements = (e) => {
+    const cursors = document.querySelectorAll('.cursor');
+    for (let i in [...cursors]) {
+      let width = cursors[i].clientWidth
+      cursors[i].setAttribute('style', 'top: ' + (e.pageY - width / 2) + 'px; left: ' + (e.pageX - width / 2) + 'px;')
+    }
+  }
+
   return (
-    <div className="container" onClick={() => sound.play()}>
+    <div className="container" onClick={() => sound.play()} onMouseMove={handleMouseMovements}>
 
       <Confetti
         recycle={false}
@@ -54,6 +62,14 @@ const NewYear = () => {
         body={farewellMsg.body}
         alt={"goodbye"}
       />
+
+      {/* cursor content */}
+      <div class="cursor cursor1"><img src="light.png" alt="light for cursor trail" /></div>
+      <div class="cursor cursor2"><img src="light.png" alt="light for cursor trail" /></div>
+      <div class="cursor cursor3"><img src="light.png" alt="light for cursor trail" /></div>
+      <div class="cursor cursor4"><img src="light.png" alt="light for cursor trail" /></div>
+      <div class="cursor cursor5"><img src="light.png" alt="light for cursor trail" /></div>
+      <div class="cursor cursor6"><img src="light.png" alt="light for cursor trail" /></div>
     </div>
   );
 };
