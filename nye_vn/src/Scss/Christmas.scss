@@ -89,7 +89,7 @@ body,
 
 /* Large font changes */
 @media (max-device-width: 440px) and (min-device-height: 360px) {
-  .xmas {
+  .xmas.xmas.container {
     .banner-words h1 {
       font-size: 6vh;
     }
