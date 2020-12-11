@@ -21,7 +21,7 @@ import {
 const NewYear = () => {
   // initialize Sound object
   const sound = new Audio(confettiSound);
-  let img_on_right = false;
+  let isReversed = false;
   // cursor className numbers
   const cursor_classes = [1, 2, 3, 4, 5, 6];
 
@@ -65,13 +65,13 @@ const NewYear = () => {
       <Slide cascade triggerOnce>
         {imgTxt.map((e) => {
           // Flip boolean value so the compnent knows what orientation it should be
-          img_on_right = !img_on_right;
+          isReversed = !isReversed;
           return (
             <MemoryLane
               key={e.image}
               img={e.image}
               text={e.text}
-              img_on_right={img_on_right}
+              isReversed={isReversed}
             />
           );
         })}
