@@ -23,8 +23,11 @@ const imgTxt = [
 ];
 
 // Add image and text for <Banner/> component
+// banner_text1 and banner_text2 are supposed to break the text into two lines
+// If new line is not desired you can leave one empty and use the other one
 const bannerData = {
-  image: `banner.png`,
+  banner_text1: "Happy",
+  banner_text2: "Holidays",
   text: `Hey you! Hope you have a great holiday season this year.`,
 };
 

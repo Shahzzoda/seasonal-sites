@@ -22,7 +22,7 @@ const NewYear = () => {
   // initialize Sound object
   const sound = new Audio(confettiSound);
   let img_on_right = false;
-// cursor className numbers
+  // cursor className numbers
   const cursor_classes = [1, 2, 3, 4, 5, 6];
 
   let handleMouseMovements = (e) => {
@@ -56,7 +56,12 @@ const NewYear = () => {
         colors={["#87eafa", "#9987fa", "#ffffff", "#002798"]}
       />
 
-      <Banner img={bannerData.image} txt={bannerData.text} />
+      <Banner
+        banner_text1={bannerData.banner_text1}
+        banner_text2={bannerData.banner_text2}
+        txt={bannerData.text}
+      />
+      
       <LetterMessage greeting={letterMsg.greeting} body={letterMsg.body} />
 
       {/* Render Pictures and text in alternating manner */}

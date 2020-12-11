@@ -1,12 +1,16 @@
 import React from "react";
 import { Bounce } from "react-awesome-reveal";
 
-const Banner = ({ img, txt, alt = "Default Alt" }) => {
+const Banner = ({ banner_text1, banner_text2, txt }) => {
   return (
     <>
       <Bounce triggerOnce>
         <div className="jumbotron jumbotron-fluid">
-          <h1 className='h1'>Happy <br /> Holidays!</h1>
+          <h1 className="h1">
+            {banner_text1}
+            <br />
+            {banner_text2}
+          </h1>
           <p>{txt}</p>
         </div>
       </Bounce>
