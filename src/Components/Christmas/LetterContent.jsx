@@ -2,7 +2,7 @@ import React from "react";
 
 const LetterContent = ({ greeting, msg }) => {
   return (
-    <div className="letter-content">
+    <div className="letter-content" tabindex="0">
       <p>{greeting},</p>
       <p>
         {msg}
