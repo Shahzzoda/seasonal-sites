@@ -31,8 +31,8 @@ const NewYear = () => {
       let width = cursors[i].clientWidth;
       cursors[i].setAttribute(
         "style",
-        "top: " + (e.pageY - width / 2) + "px; "
-        + "left: " + (e.pageX - width / 2) + "px;"
+        "top: " + (e.pageY - width / 2) + "px; " +
+        "left: " + (e.pageX - width / 2) + "px;"
       );
     }
   };
