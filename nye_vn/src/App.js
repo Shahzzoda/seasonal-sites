@@ -10,7 +10,7 @@ const App = () => {
     document.body.style = "background-color: green;";
     return <Christmas />;
   } else if (theme === "New Year") {
-    document.body.style = "background-color: black;";
+    document.body.style = "background-color: black; cursor: url(stick.png), auto;";
     return <NewYear />;
   }
 };

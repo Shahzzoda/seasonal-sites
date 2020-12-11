@@ -1,121 +1,113 @@
 @import url('https://fonts.googleapis.com/css2?family=Mr+Bedfort&display=swap');
 @import url("https://fonts.googleapis.com/css2?family=Texturina:wght@500&display=swap");
 
-body {
-  cursor: url(stick.png), auto;
-}
-
-p {
-  color: #d3d3d3;
-  font-size: 1em;
-  letter-spacing: 1px;
-  line-height: 2;
-  font-family: "Texturina";
-}
-
-.jumbotron.jumbotron-fluid {
-  height: 100vh;
-  background-color: transparent;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  h1 {
-    font-family: 'Mr Bedfort', cursive;
+.nye {
+  p {
+    color: #d3d3d3;
+    font-size: 1em;
+    letter-spacing: 1px;
+    line-height: 2;
+    font-family: "Texturina";
+  }
+  .jumbotron.jumbotron-fluid {
+    height: 100vh;
+    background-color: transparent;
     text-align: center;
-    vertical-align: middle;
-    font-size: 4em;
-    margin-top: 25vh;
-    letter-spacing: 3px;
-    color: #fffbe6;
-    text-shadow: 0 0 5px #ffffcc, 0 0 8px #ffb500, 0 0 11px yellow;
-  }
-  img {
-    max-width: 100%;
-  }
-}
-
-.letter-text {
-  margin-bottom: 15vh;
-}
-
-.gallery-memory-lane {
-  display: flex;
-  align-items: center;
-  margin: 15vh 0;
-  img {
-    max-width: 100%;
-  }
-}
-
-// For sparklinbg cursor effect
-.cursor {
-  position:absolute;
-  animation-name: spin;
-  animation-duration: 500ms;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-  pointer-events: none;
-  transition-timing-function: ease-out;
-  transition-delay: 0;
-
-  &.cursor1 {
-    width: 90px;
-    height: 90px;
-    transition-duration: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    h1 {
+      font-family: 'Mr Bedfort', cursive;
+      text-align: center;
+      vertical-align: middle;
+      font-size: 4em;
+      margin-top: 25vh;
+      letter-spacing: 3px;
+      color: #fffbe6;
+      text-shadow: 0 0 5px #ffffcc, 0 0 8px #ffb500, 0 0 11px yellow;
+    }
     img {
+      max-width: 100%;
+    }
+  }
+
+  .letter-text {
+    margin-bottom: 15vh;
+  }
+
+  .gallery-memory-lane {
+    display: flex;
+    align-items: center;
+    margin: 15vh 0;
+    img {
+      max-width: 100%;
+    }
+  }
+}
+// For sparklinbg cursor effect
+.nye {
+  .cursor {
+    position:absolute;
+    animation-name: spin;
+    animation-duration: 500ms;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    pointer-events: none;
+    transition-timing-function: ease-out;
+    transition-delay: 0;
+    &.cursor1 {
       width: 90px;
       height: 90px;
+      transition-duration: 0;
+      img {
+        width: 90px;
+        height: 90px;
+      }
     }
-  }
-
-  &.cursor2 {
-    width: 50px;
-    height: 50px;
-    transition-duration: 50ms;
-    img {
+    &.cursor2 {
       width: 50px;
       height: 50px;
+      transition-duration: 50ms;
+      img {
+        width: 50px;
+        height: 50px;
+      }
     }
-  }
-
-  &.cursor3 {
-    width: 50px;
-    height: 50px;
-    transition-duration: 54ms;
-    img {
+    &.cursor3 {
       width: 50px;
       height: 50px;
+      transition-duration: 54ms;
+      img {
+        width: 50px;
+        height: 50px;
+      }
     }
-  }
-
-  &.cursor4 {
-    width: 30px;
-    height: 30px;
-    transition-duration: 51ms;
-    img{
+    &.cursor4 {
       width: 30px;
       height: 30px;
+      transition-duration: 51ms;
+      img{
+        width: 30px;
+        height: 30px;
+      }
     }
-  }
-
-  &.cursor5 {
-    width: 20px;
-    height: 20px;
-    transition-duration: 42ms;
-    img{
+    &.cursor5 {
       width: 20px;
       height: 20px;
+      transition-duration: 42ms;
+      img{
+        width: 20px;
+        height: 20px;
+      }
     }
-  }
-
-  &.cursor6 {
-    width: 35px;
-    height: 35px;
-    transition-duration: 53ms;
-    img{
+    &.cursor6 {
       width: 35px;
       height: 35px;
+      transition-duration: 53ms;
+      img{
+        width: 35px;
+        height: 35px;
+      }
     }
   }
 }
