@@ -1,3 +1,7 @@
+/**
+ * This file should only contain data for Christmas themed Page
+ */
+
 const intro_words = {
   msg: "Merry Christmas, Ya Filthy Animal!",
   from: "Shahzoda",

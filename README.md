@@ -4,7 +4,7 @@ Virtual card for friends and family this holiday season! Includes animations, co
 
 # What to change <img src="https://media.giphy.com/media/6vj5quVNRhoQw/giphy.gif" align="right" width="100">
 
-To choose theme, simply toggle `theme` variable in `themeConfig.js` file. 
+To choose theme, simply toggle `theme` variable in `themeConfig.js` file.<br/> 
 ⚠️ Warning: Make sure to set the value of `theme` exactly as specified ⚠️ 
 
 Example code:
