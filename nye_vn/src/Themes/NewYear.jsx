@@ -88,8 +88,8 @@ const NewYear = () => {
         return (
           <Cursor
             key={cursor}
-            img={`light.png`}
-            alt={`light for cursor trail`}
+            img="light.png"
+            alt="light for cursor trail"
             class_name={`cursor cursor${cursor}`}
           />
         );

@@ -56,7 +56,7 @@ const Christmas = () => {
         return (
           <Light
             key={cn}
-            img={`lights.png`}
+            img="lights.png"
             class_name={`lights left lights-${cn}`}
           />
         );
@@ -65,7 +65,7 @@ const Christmas = () => {
         return (
           <Light
             key={cn}
-            img={`lights.png`}
+            img="lights.png"
             class_name={`lights right lights-${cn}`}
           />
         );
@@ -76,8 +76,8 @@ const Christmas = () => {
             <Hat
               key={cn}
               class_name={`hat hat-${cn}`}
-              img={`hat.png`}
-              alt={`christmas hat falling`}
+              img="hat.png"
+              alt="christmas hat falling"
             />
           );
         })}
