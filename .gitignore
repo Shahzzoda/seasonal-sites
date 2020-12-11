@@ -9,7 +9,13 @@ node_modules/
 /coverage
 
 # production
-/build
+build/
+
+#firebase
+.firebaserc
+404.html
+firebase.json
+index.html
 
 # misc
 .DS_Store
