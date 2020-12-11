@@ -62,7 +62,7 @@ p {
   &.cursor1 {
     width: 90px;
     height: 90px;
-    transition-duration: 0ms;
+    transition-duration: 0;
     img {
       width: 90px;
       height: 90px;
@@ -72,7 +72,7 @@ p {
   &.cursor2 {
     width: 50px;
     height: 50px;
-    transition-duration: 10ms;
+    transition-duration: 50ms;
     img {
       width: 50px;
       height: 50px;
@@ -82,7 +82,7 @@ p {
   &.cursor3 {
     width: 50px;
     height: 50px;
-    transition-duration: 13ms;
+    transition-duration: 54ms;
     img {
       width: 50px;
       height: 50px;
@@ -92,7 +92,7 @@ p {
   &.cursor4 {
     width: 30px;
     height: 30px;
-    transition-duration: 11ms;
+    transition-duration: 51ms;
     img{
       width: 30px;
       height: 30px;
@@ -102,7 +102,7 @@ p {
   &.cursor5 {
     width: 20px;
     height: 20px;
-    transition-duration: 12ms;
+    transition-duration: 42ms;
     img{
       width: 20px;
       height: 20px;
@@ -112,7 +112,7 @@ p {
   &.cursor6 {
     width: 35px;
     height: 35px;
-    transition-duration: 13ms;
+    transition-duration: 53ms;
     img{
       width: 35px;
       height: 35px;

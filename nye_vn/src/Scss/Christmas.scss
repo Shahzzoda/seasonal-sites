@@ -17,7 +17,7 @@ body,
   padding: 0 12vw;
 }
 
-.intro-words {
+.banner-words {
   text-align: center;
   min-height: 100vh;
   display: flex;
@@ -25,7 +25,7 @@ body,
   flex-direction: column;
 }
 
-.intro-words h1 {
+.banner-words h1 {
   font-family: "Oleo Script", cursive;
   color: #f5f7da;
   font-size: 10vh;
@@ -33,7 +33,7 @@ body,
   padding: 5vw;
 }
 
-.intro-words p {
+.banner-words p {
   line-height: 1;
   font-family: monospace;
   color: #f5f7da;
@@ -93,7 +93,7 @@ img {
 
 /* Large font changes */
 @media (max-device-width: 440px) and (min-device-height: 360px) {
-  .intro-words h1 {
+  .banner-words h1 {
     font-size: 6vh;
   }
   .letter-content p,

@@ -2,7 +2,7 @@ import React from "react";
 
 const FareWell = ({ msg, from }) => {
   return (
-    <div className="intro-words">
+    <div className="banner-words">
       <h1>{msg}</h1>
       <p>{from}. </p>
     </div>

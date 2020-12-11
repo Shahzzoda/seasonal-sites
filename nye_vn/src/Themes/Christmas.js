@@ -4,7 +4,7 @@ import "../Scss/Christmas.scss";
 // import components
 import Hat from "../Components/Christmas/Hat";
 import Light from "../Components/Christmas/Light";
-import IntroWords from "../Components/Christmas/IntroWords";
+import Banner from "../Components/Christmas/Banner";
 import LetterContent from "../Components/Christmas/LetterContent";
 import MemoryLane from "../Components/Christmas/MemoryLane";
 import Farewell from "../Components/Christmas/Farewell";
@@ -26,7 +26,7 @@ const Christmas = () => {
   const sound = new Audio(jingleBell);
   return (
     <div className="container" onClick={() => sound.play()}>
-      <IntroWords
+      <Banner
         msg={intro_words.msg}
         from={intro_words.from}
         to={intro_words.to}

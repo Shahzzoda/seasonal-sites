@@ -1,5 +1,5 @@
 // Value can be toggle to Christmas || New Year
-const theme = "New Year";
+const theme = "Christmas";
 
 
 
