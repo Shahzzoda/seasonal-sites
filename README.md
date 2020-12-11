@@ -1,6 +1,6 @@
 # About
 
-Virtual card for friends and family this holiday season! Includes anumations, confetti, and obnoxious party horn sounds. Visuals attached below.
+Virtual card for friends and family this holiday season! Includes animations, confetti, and obnoxious party horn sounds. Visuals attached below.
 
 # What to change <img src="https://media.giphy.com/media/6vj5quVNRhoQw/giphy.gif" align="right" width="100">
 
