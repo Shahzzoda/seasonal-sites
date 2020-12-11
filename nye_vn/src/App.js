@@ -7,10 +7,10 @@ import { theme } from "./Data/themeConfig";
 // Render pages conditially based on the param
 const App = () => {
   if (theme === "Christmas") {
-    document.body.style = " background-color: green;";
+    document.body.style = "background-color: green;";
     return <Christmas />;
   } else if (theme === "New Year") {
-    document.body.style = " background-color: black ;";
+    document.body.style = "background-color: black;";
     return <NewYear />;
   }
 };

@@ -31,18 +31,15 @@ const NewYear = () => {
       let width = cursors[i].clientWidth;
       cursors[i].setAttribute(
         "style",
-        "top: " +
-          (e.pageY - width / 2) +
-          "px; left: " +
-          (e.pageX - width / 2) +
-          "px;"
+        "top: " + (e.pageY - width / 2) + "px; "
+        + "left: " + (e.pageX - width / 2) + "px;"
       );
     }
   };
 
   return (
     <div
-      className="container"
+      className="nye container"
       onClick={() => sound.play()}
       onMouseMove={handleMouseMovements}
     >
@@ -61,7 +58,7 @@ const NewYear = () => {
         banner_text2={bannerData.banner_text2}
         txt={bannerData.text}
       />
-      
+
       <LetterMessage greeting={letterMsg.greeting} body={letterMsg.body} />
 
       {/* Render Pictures and text in alternating manner */}

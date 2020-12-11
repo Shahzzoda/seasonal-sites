@@ -25,7 +25,7 @@ const Christmas = () => {
   // initialize sound object
   const sound = new Audio(jingleBell);
   return (
-    <div className="container" onClick={() => sound.play()}>
+    <div className="xmas container" onClick={() => sound.play()}>
       <Banner
         msg={intro_words.msg}
         from={intro_words.from}

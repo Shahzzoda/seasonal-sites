@@ -3,58 +3,56 @@
 
 html,
 body,
-.container {
+.xmas.container {
   width: 100vw;
   min-height: 100vh;
   overflow-x: hidden;
 }
 
-.container {
+.xmas.container {
   flex-direction: column;
   display: flex;
   justify-content: center;
-  /* 11 vw bc width of light is 10vw */
+  /* 12 vw bc width of light is 10vw */
   padding: 0 12vw;
-}
 
-.banner-words {
-  text-align: center;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-}
+  .banner-words {
+    text-align: center;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    h1 {
+      font-family: "Oleo Script", cursive;
+      color: #f5f7da;
+      font-size: 10vh;
+      text-shadow: 5px 0 #960000;
+      padding: 5vw;
+    }
+    p {
+      line-height: 1;
+      font-family: monospace;
+      color: #f5f7da;
+      letter-spacing: 1px;
+    }
+  }
 
-.banner-words h1 {
-  font-family: "Oleo Script", cursive;
-  color: #f5f7da;
-  font-size: 10vh;
-  text-shadow: 5px 0 #960000;
-  padding: 5vw;
-}
+  .letter-content {
+    margin-bottom: 10vh;
+  }
 
-.banner-words p {
-  line-height: 1;
-  font-family: monospace;
-  color: #f5f7da;
-  letter-spacing: 1px;
-}
-
-.letter-content {
-  margin-bottom: 10vh;
-}
-
-.letter-content p,
-.gallery-memory-lane p {
-  font-family: "Permanent Marker", cursive;
-  color: #f5f7da;
-  font-size: 1em;
-  letter-spacing: 1px;
-  line-height: 3;
+  .letter-content p,
+  .gallery-memory-lane p {
+    font-family: "Permanent Marker", cursive;
+    color: #f5f7da;
+    font-size: 1em;
+    letter-spacing: 1px;
+    line-height: 3;
+  }
 }
 
 /* santa  */
-.santa-holder img {
+.xmas .santa-holder img {
   position: relative;
   left: -100vw;
   animation-name: santa-go-brr;
@@ -63,7 +61,6 @@ body,
   animation-timing-function: linear;
   animation-iteration-count: infinite;
 }
-
 @keyframes santa-go-brr {
   from {
     position: relative;
@@ -75,13 +72,13 @@ body,
   }
 }
 /* img galleries  */
-.gallery-memory-lane {
+.xmas .gallery-memory-lane {
   display: flex;
   align-items: center;
   margin: 0 5vh;
 }
 
-img {
+.xmas img {
   max-width: 100%;
 }
 
@@ -104,7 +101,7 @@ img {
 }
 
 /* Falling Hats */
-.hat-rack {
+.xmas .hat-rack {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -114,69 +111,69 @@ img {
   padding: 0 5vw;
 }
 
-.hat {
+.xmas .hat {
   max-width: 25vw;
   max-height: 25vw;
   animation-name: hat-falling;
-  /* animation-fill-mode: forwards; */
   animation-timing-function: linear;
   position: relative;
   top: -25vw;
+
+  &.hat-1 {
+    animation-duration: 1200ms;
+    animation-delay: 400ms;
+  }
+
+  &.hat-2 {
+    animation-duration: 1700ms;
+    animation-delay: 500ms;
+  }
+
+  &.hat-3 {
+    animation-duration: 2000ms;
+    animation-delay: 100ms;
+  }
+
+  &.hat-4 {
+    animation-duration: 1700ms;
+  }
+
+  &.hat-5 {
+    animation-duration: 1300ms;
+    animation-delay: 200s;
+  }
+
+  &.hat-6 {
+    animation-duration: 1000ms;
+    animation-delay: 300ms;
+  }
+
+  &.hat-7 {
+    animation-duration: 2000ms;
+    animation-delay: 600ms;
+  }
+
+  &.hat-8 {
+    animation-duration: 1050ms;
+    animation-delay: 100ms;
+  }
+
+  &.hat-9 {
+    animation-duration: 1100ms;
+    animation-delay: 900ms;
+  }
+
+  &.hat-10 {
+    animation-duration: 2000s;
+    animation-delay: 800s;
+  }
 }
 
-.hat-1 {
-  animation-duration: 1200ms;
-  animation-delay: 400ms;
-}
-
-.hat-2 {
-  animation-duration: 1700ms;
-  animation-delay: 500ms;
-}
-
-.hat-3 {
-  animation-duration: 2000ms;
-  animation-delay: 100ms;
-}
-
-.hat-4 {
-  animation-duration: 1700ms;
-}
-
-.hat-5 {
-  animation-duration: 1300ms;
-  animation-delay: 200s;
-}
-
-.hat-6 {
-  animation-duration: 1000ms;
-  animation-delay: 300ms;
-}
-
-.hat-7 {
-  animation-duration: 2000ms;
-  animation-delay: 600ms;
-}
-
-.hat-8 {
-  animation-duration: 1050ms;
-  animation-delay: 100ms;
-}
-
-.hat-9 {
-  animation-duration: 1100ms;
-  animation-delay: 900ms;
-}
-
-.hat-10 {
-  animation-duration: 2000s;
-  animation-delay: 800s;
-}
 
 @keyframes hat-falling {
   0% {
     top: -100px;
-    display: inline-block;
+    // display: inline-block;
     transform: rotate(0deg);
   }
   33% {
@@ -192,17 +189,18 @@ img {
 }
 
 /* Lights */
-.lights {
-  position: fixed;
-  width: 10vw;
-}
-.left {
-  left: 0;
-}
-.right {
-  right: 0;
-}
-
-.lights-1 {
-  top: 0vh;
+.xmas {
+  .lights {
+    position: fixed;
+    width: 10vw;
+  }
+  .left {
+    left: 0;
+  }
+  .right {
+    right: 0;
+  }
+  .lights-1 {
+    top: 0vh;
+  }
 }
