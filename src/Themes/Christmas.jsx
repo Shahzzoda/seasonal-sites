@@ -9,7 +9,7 @@ import LetterContent from "../Components/Christmas/LetterContent";
 import MemoryLane from "../Components/MemoryLane";
 import Farewell from "../Components/Christmas/Farewell";
 // import data
-import jingleBell from "../sounds/bells-trimmed.m4a";
+import jingleBell from "../Sounds/bells-trimmed.m4a";
 import {
   intro_words,
   letter_content,
