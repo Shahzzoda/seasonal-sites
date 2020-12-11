@@ -9,25 +9,43 @@ import MemoryLane from "../Components/NewYear/MemoryLane";
 import Banner from "../Components/NewYear/Banner";
 import LetterMessage from "../Components/NewYear/LetterMessage";
 import FarewellMessage from "../Components/NewYear/FarewellMessage";
+import Cursor from "../Components/NewYear/Cursor";
 // Data imports
-import { imgTxt, bannerData, letterMsg, farewellMsg } from "../Data/NewYearPageData";
+import {
+  imgTxt,
+  bannerData,
+  letterMsg,
+  farewellMsg,
+} from "../Data/NewYearPageData";
 
 const NewYear = () => {
   // initialize Sound object
   const sound = new Audio(confettiSound);
   let img_on_right = false;
+// cursor className numbers
+  const cursor_classes = [1, 2, 3, 4, 5, 6];
 
   let handleMouseMovements = (e) => {
-    const cursors = document.querySelectorAll('.cursor');
+    const cursors = document.querySelectorAll(".cursor");
     for (let i in [...cursors]) {
-      let width = cursors[i].clientWidth
-      cursors[i].setAttribute('style', 'top: ' + (e.pageY - width / 2) + 'px; left: ' + (e.pageX - width / 2) + 'px;')
+      let width = cursors[i].clientWidth;
+      cursors[i].setAttribute(
+        "style",
+        "top: " +
+          (e.pageY - width / 2) +
+          "px; left: " +
+          (e.pageX - width / 2) +
+          "px;"
+      );
     }
-  }
+  };
 
   return (
-    <div className="container" onClick={() => sound.play()} onMouseMove={handleMouseMovements}>
-
+    <div
+      className="container"
+      onClick={() => sound.play()}
+      onMouseMove={handleMouseMovements}
+    >
       <Confetti
         recycle={false}
         friction={1}
@@ -64,12 +82,16 @@ const NewYear = () => {
       />
 
       {/* cursor content */}
-      <div class="cursor cursor1"><img src="light.png" alt="light for cursor trail" /></div>
-      <div class="cursor cursor2"><img src="light.png" alt="light for cursor trail" /></div>
-      <div class="cursor cursor3"><img src="light.png" alt="light for cursor trail" /></div>
-      <div class="cursor cursor4"><img src="light.png" alt="light for cursor trail" /></div>
-      <div class="cursor cursor5"><img src="light.png" alt="light for cursor trail" /></div>
-      <div class="cursor cursor6"><img src="light.png" alt="light for cursor trail" /></div>
+      {cursor_classes.map((cursor) => {
+        return (
+          <Cursor
+            key={cursor}
+            img={`light.png`}
+            alt={`light for cursor trail`}
+            class_name={`cursor cursor${cursor}`}
+          />
+        );
+      })}
     </div>
   );
 };

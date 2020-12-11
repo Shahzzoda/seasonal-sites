@@ -1,19 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Oleo+Script:wght@700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Oleo+Script:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap");
 
-
-html, body, .container {
+html,
+body,
+.container {
   width: 100vw;
   min-height: 100vh;
   overflow-x: hidden;
-}
-
-html  {
-  background-color: green;
-}
-
-body {
-  background: transparent;
 }
 
 .container {
@@ -21,7 +14,7 @@ body {
   display: flex;
   justify-content: center;
   /* 11 vw bc width of light is 10vw */
-  padding: 0 12vw; 
+  padding: 0 12vw;
 }
 
 .intro-words {
@@ -33,11 +26,11 @@ body {
 }
 
 .intro-words h1 {
-  font-family: 'Oleo Script', cursive;
+  font-family: "Oleo Script", cursive;
   color: #f5f7da;
   font-size: 10vh;
   text-shadow: 5px 0 #960000;
-  padding: 5vw
+  padding: 5vw;
 }
 
 .intro-words p {
@@ -53,7 +46,7 @@ body {
 
 .letter-content p,
 .gallery-memory-lane p {
-  font-family: 'Permanent Marker', cursive;
+  font-family: "Permanent Marker", cursive;
   color: #f5f7da;
   font-size: 1em;
   letter-spacing: 1px;
@@ -103,7 +96,7 @@ img {
   .intro-words h1 {
     font-size: 6vh;
   }
-  .letter-content p, 
+  .letter-content p,
   .gallery-memory-lane p {
     font-size: 2vh;
     line-height: 2;
@@ -157,7 +150,7 @@ img {
 
 .hat-6 {
   animation-duration: 1000ms;
-  animation-delay: 300ms
+  animation-delay: 300ms;
 }
 
 .hat-7 {
@@ -167,7 +160,7 @@ img {
 
 .hat-8 {
   animation-duration: 1050ms;
-  animation-delay: 100ms
+  animation-delay: 100ms;
 }
 
 .hat-9 {
@@ -192,7 +185,7 @@ img {
   66% {
     transform: rotate(40deg);
   }
-  100%{
+  100% {
     top: 300vh;
     transform: rotate(0deg);
   }
