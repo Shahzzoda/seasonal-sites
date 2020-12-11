@@ -3,7 +3,7 @@ import "../Scss/NewYear.scss";
 import React from "react";
 import { Slide } from "react-awesome-reveal";
 import Confetti from "react-confetti";
-import confettiSound from "../Sounds/party-horn.wav";
+import confettiSound from "../sounds/party-horn.wav";
 // Componenet imports
 import MemoryLane from "../Components/MemoryLane";
 import Banner from "../Components/NewYear/Banner";
