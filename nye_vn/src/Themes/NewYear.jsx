@@ -71,7 +71,7 @@ const NewYear = () => {
               key={e.image}
               img={e.image}
               text={e.text}
-              img_on_right={img_on_right}
+              isReversed={img_on_right}
             />
           );
         })}
