@@ -179,17 +179,15 @@ body,
 
 /* Lights */
 .xmas {
-  .lights {
+  img.lights {
     position: fixed;
     width: 10vw;
-  }
-  .left {
-    left: 0;
-  }
-  .right {
-    right: 0;
-  }
-  .lights-1 {
     top: 0vh;
+    &.left {
+      left: 0;
+    }
+    &.right {
+      right: 0;
+    }
   }
 }

@@ -52,24 +52,6 @@ const Christmas = () => {
       <Farewell msg={farewell.msg} from={farewell.from} />
 
       {/** Rendering hats and lights*/}
-      {class_names.map((cn) => {
-        return (
-          <Light
-            key={cn}
-            img="lights.png"
-            class_name={`lights left lights-${cn}`}
-          />
-        );
-      })}
-      {class_names.map((cn) => {
-        return (
-          <Light
-            key={cn}
-            img="lights.png"
-            class_name={`lights right lights-${cn}`}
-          />
-        );
-      })}
       <div className="hat-rack">
         {class_names.map((cn) => {
           return (
@@ -82,6 +64,16 @@ const Christmas = () => {
           );
         })}
       </div>
+      <Light
+        key={0}
+        img="lights.png"
+        class_name="lights right"
+      />
+      <Light
+        key={1}
+        img="lights.png"
+        class_name="lights left"
+      />
     </div>
   );
 };
