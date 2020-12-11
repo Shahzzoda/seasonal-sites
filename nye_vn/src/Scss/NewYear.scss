@@ -119,3 +119,9 @@
     
   }
 }
+
+@media (max-device-width: 760px) {
+  .nye .gallery-memory-lane.reverse {
+    flex-direction: column-reverse;
+  }
+} 

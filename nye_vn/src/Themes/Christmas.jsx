@@ -6,7 +6,7 @@ import Hat from "../Components/Christmas/Hat";
 import Light from "../Components/Christmas/Light";
 import Banner from "../Components/Christmas/Banner";
 import LetterContent from "../Components/Christmas/LetterContent";
-import MemoryLane from "../Components/Christmas/MemoryLane";
+import MemoryLane from "../Components/MemoryLane";
 import Farewell from "../Components/Christmas/Farewell";
 // import data
 import jingleBell from "../Sounds/bells-trimmed.m4a";

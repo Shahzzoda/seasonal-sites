@@ -5,7 +5,7 @@ import { Slide } from "react-awesome-reveal";
 import Confetti from "react-confetti";
 import confettiSound from "../Sounds/party-horn.wav";
 // Componenet imports
-import MemoryLane from "../Components/NewYear/MemoryLane";
+import MemoryLane from "../Components/MemoryLane";
 import Banner from "../Components/NewYear/Banner";
 import LetterMessage from "../Components/NewYear/LetterMessage";
 import FarewellMessage from "../Components/NewYear/FarewellMessage";
