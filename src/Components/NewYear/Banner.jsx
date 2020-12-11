@@ -5,7 +5,7 @@ const Banner = ({ banner_text1, banner_text2, txt }) => {
   return (
     <>
       <Bounce triggerOnce>
-        <div className="jumbotron jumbotron-fluid">
+        <div className="jumbotron jumbotron-fluid" tabIndex="0" >
           <h1 className="h1">
             {banner_text1}
             <br />
