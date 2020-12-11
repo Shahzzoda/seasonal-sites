@@ -15,7 +15,6 @@ body,
   justify-content: center;
   /* 12 vw bc width of light is 10vw */
   padding: 0 12vw;
-
   .banner-words {
     text-align: center;
     min-height: 100vh;
@@ -36,11 +35,9 @@ body,
       letter-spacing: 1px;
     }
   }
-
   .letter-content {
     margin-bottom: 10vh;
   }
-
   .letter-content p,
   .gallery-memory-lane p {
     font-family: "Permanent Marker", cursive;
@@ -71,15 +68,17 @@ body,
     left: 110vw;
   }
 }
-/* img galleries  */
-.xmas .gallery-memory-lane {
-  display: flex;
-  align-items: center;
-  margin: 0 5vh;
-}
 
-.xmas img {
-  max-width: 100%;
+/* img galleries  */
+.xmas  {
+  .gallery-memory-lane {
+    display: flex;
+    align-items: center;
+    margin: 0 5vh;
+  }
+  img {
+    max-width: 100%;
+  }
 }
 
 @media (max-device-width: 760px) {
@@ -90,13 +89,15 @@ body,
 
 /* Large font changes */
 @media (max-device-width: 440px) and (min-device-height: 360px) {
-  .banner-words h1 {
-    font-size: 6vh;
-  }
-  .letter-content p,
-  .gallery-memory-lane p {
-    font-size: 2vh;
-    line-height: 2;
+  .xmas {
+    .banner-words h1 {
+      font-size: 6vh;
+    }
+    .letter-content p,
+    .gallery-memory-lane p {
+      font-size: 2vh;
+      line-height: 2;
+    }
   }
 }
 
@@ -109,66 +110,54 @@ body,
   top: -200vh;
   max-width: 100vw;
   padding: 0 5vw;
-}
-
-.xmas .hat {
-  max-width: 25vw;
-  max-height: 25vw;
-  animation-name: hat-falling;
-  animation-timing-function: linear;
-  position: relative;
-  top: -25vw;
-
-  &.hat-1 {
-    animation-duration: 1200ms;
-    animation-delay: 400ms;
-  }
-
-  &.hat-2 {
-    animation-duration: 1700ms;
-    animation-delay: 500ms;
-  }
-
-  &.hat-3 {
-    animation-duration: 2000ms;
-    animation-delay: 100ms;
-  }
-
-  &.hat-4 {
-    animation-duration: 1700ms;
-  }
-
-  &.hat-5 {
-    animation-duration: 1300ms;
-    animation-delay: 200s;
-  }
-
-  &.hat-6 {
-    animation-duration: 1000ms;
-    animation-delay: 300ms;
-  }
-
-  &.hat-7 {
-    animation-duration: 2000ms;
-    animation-delay: 600ms;
-  }
-
-  &.hat-8 {
-    animation-duration: 1050ms;
-    animation-delay: 100ms;
-  }
-
-  &.hat-9 {
-    animation-duration: 1100ms;
-    animation-delay: 900ms;
-  }
-
-  &.hat-10 {
-    animation-duration: 2000s;
-    animation-delay: 800s;
+  .hat {
+    max-width: 25vw;
+    max-height: 25vw;
+    animation-name: hat-falling;
+    animation-timing-function: linear;
+    position: relative;
+    top: -25vw;
+    &.hat-1 {
+      animation-duration: 1200ms;
+      animation-delay: 400ms;
+    }
+    &.hat-2 {
+      animation-duration: 1700ms;
+      animation-delay: 500ms;
+    }
+    &.hat-3 {
+      animation-duration: 2000ms;
+      animation-delay: 100ms;
+    }
+    &.hat-4 {
+      animation-duration: 1700ms;
+    }
+    &.hat-5 {
+      animation-duration: 1300ms;
+      animation-delay: 200s;
+    }
+    &.hat-6 {
+      animation-duration: 1000ms;
+      animation-delay: 300ms;
+    }
+    &.hat-7 {
+      animation-duration: 2000ms;
+      animation-delay: 600ms;
+    }
+    &.hat-8 {
+      animation-duration: 1050ms;
+      animation-delay: 100ms;
+    }
+    &.hat-9 {
+      animation-duration: 1100ms;
+      animation-delay: 900ms;
+    }
+    &.hat-10 {
+      animation-duration: 2000s;
+      animation-delay: 800s;
+    }
   }
 }
-
 
 @keyframes hat-falling {
   0% {
