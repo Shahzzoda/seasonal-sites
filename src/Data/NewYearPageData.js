@@ -45,7 +45,6 @@ const imgTxt = [
 
 // Add image and text for <FarewellMessage/> component
 const farewellMsg = {
-  image: "goodbye.png",
   body: " For your presence this year! Wishing your love, health, and happiness.",
 };
 

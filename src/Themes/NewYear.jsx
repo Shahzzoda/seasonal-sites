@@ -23,7 +23,7 @@ const NewYear = () => {
   const sound = new Audio(confettiSound);
   let isReversed = false;
   // cursor className numbers
-  const cursor_classes = [1, 2, 3, 4, 5, 6];
+  const cursor_classes_no = [1, 2, 3, 4, 5, 6];
 
   let handleMouseMovements = (e) => {
     const cursors = document.querySelectorAll(".cursor");
@@ -42,6 +42,7 @@ const NewYear = () => {
       className="nye container"
       onClick={() => sound.play()}
       onMouseMove={handleMouseMovements}
+      role="main"
     >
       <Confetti
         recycle={false}
@@ -63,7 +64,7 @@ const NewYear = () => {
 
       {/* Render Pictures and text in alternating manner */}
       <Slide cascade triggerOnce>
-        {imgTxt.map((e) => {
+        {imgTxt.map((e, index) => {
           // Flip boolean value so the compnent knows what orientation it should be
           isReversed = !isReversed;
           return (
@@ -72,25 +73,24 @@ const NewYear = () => {
               img={e.image}
               text={e.text}
               isReversed={isReversed}
+              data_key={index}
             />
           );
         })}
       </Slide>
 
       <FarewellMessage
-        img={farewellMsg.image}
         body={farewellMsg.body}
-        alt={"goodbye"}
       />
 
       {/* cursor content */}
-      {cursor_classes.map((cursor) => {
+      {cursor_classes_no.map((num) => {
         return (
           <Cursor
-            key={cursor}
+            key={num}
             img="light.png"
             alt="light for cursor trail"
-            class_name={`cursor cursor${cursor}`}
+            class_name={`cursor cursor${num}`}
           />
         );
       })}

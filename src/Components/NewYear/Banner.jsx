@@ -5,13 +5,13 @@ const Banner = ({ banner_text1, banner_text2, txt }) => {
   return (
     <>
       <Bounce triggerOnce>
-        <div className="jumbotron jumbotron-fluid" tabIndex="0" >
-          <h1 className="h1">
+        <div className="jumbotron jumbotron-fluid" tabIndex="0" role="region" aria-label="intro text container">
+          <h1 className="h1" role="heading" aria-level="1" aria-label="intro text">
             {banner_text1}
             <br />
             {banner_text2}
           </h1>
-          <p>{txt}</p>
+          <p role="region" aria-label="intro text complementary">{txt}</p>
         </div>
       </Bounce>
     </>
