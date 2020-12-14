@@ -4,9 +4,9 @@ Holiday cards are outdated, limited in customization and space, and will take we
 
 There's two versions out right now:
 
-- Christmas Version - [Link](https://new-year-site.web.app/) <img src="https://freepngimg.com/download/christmas/26196-6-christmas-stocking.png" width="30" align="center">
+- Christmas Version - [Link](https://christmas-site.web.app/)  <img src="https://freepngimg.com/download/christmas/26196-6-christmas-stocking.png" width="30" align="center">
 
-- New Years Eve Version - [Link](https://christmas-site.web.app/) <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6dqj6A2VfPLyXHuTGCnXcrt5I0jIhfR2NBQ&usqp=CAU" width="30" align="center">
+- New Years Eve Version - [Link](https://new-year-site.web.app/) <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6dqj6A2VfPLyXHuTGCnXcrt5I0jIhfR2NBQ&usqp=CAU" width="30" align="center">
 
 Every text and image is customizable. With these templates, you can add your own content and deploy.
 
