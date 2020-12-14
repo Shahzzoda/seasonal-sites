@@ -73,6 +73,7 @@ const NewYear = () => {
               text={e.text}
               isReversed={isReversed}
               data_key={index}
+              alt={e.alt_img_text}
             />
           );
         })}

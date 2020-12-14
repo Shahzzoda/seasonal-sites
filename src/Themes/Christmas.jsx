@@ -45,6 +45,7 @@ const Christmas = () => {
             img={memory.img}
             text={memory.text}
             isReversed={isReversed}
+            alt={memory.alt_img_text}
           />
         );
       })}
@@ -67,11 +68,13 @@ const Christmas = () => {
       <Light
         key={0}
         img="lights.png"
+        alt="light borders"
         class_name="lights right"
       />
       <Light
         key={1}
         img="lights.png"
+        alt="light borders"
         class_name="lights left"
       />
     </div>

@@ -21,21 +21,25 @@ const letter_content = {
 const memory_lane = [
   {
     img: "1.png",
+    alt_img_text: "memories",
     text:
       "It has survived not only five centuries, but also the leap into electronic typesetting...",
   },
   {
     img: "2.png",
+    alt_img_text: "memories",
     text:
       "It has survived not only five centuries, but also the leap into electronic typesetting...",
   },
   {
     img: "3.png",
+    alt_img_text: "memories",
     text:
       "It has survived not only five centuries, but also the leap into electronic typesetting...",
   },
   {
     img: "4.png",
+    alt_img_text: "memories",
     text:
       "It has survived not only five centuries, but also the leap into electronic typesetting...",
   },
