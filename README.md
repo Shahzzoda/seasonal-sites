@@ -57,16 +57,23 @@ const farewellMsg = {
 };
 ```
 
-# How to Run
+# How to Customize & Run
 
 ##### Step 1:
-
-Run `npm install` in parent directory to download all required packages 📦
+Fork the repo
 
 ##### Step 2:
-
-Run `npm start` in parent directory to launch app 🚀
+Choose theme and set other values in the `Data` folder 
 
 ##### Step 3:
+Run `npm install` in parent directory to download all required packages 📦
 
-Deploy on github [here](https://dev.to/yuribenjamin/how-to-deploy-react-app-in-github-pages-2a1f) -- or anywhere else you prefer :D
+##### Step 4:
+Run `npm start` in parent directory to launch app and double check all is working well  🚀
+
+##### Step 5:
+Deploy! We recommend using this resource [here](https://dev.to/yuribenjamin/how-to-deploy-react-app-in-github-pages-2a1f) that uses github and npm :D 
+Firebase is also great! https://firebase.google.com/
+
+##### Step 6:
+Share with your family and friends 
