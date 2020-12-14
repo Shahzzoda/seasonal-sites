@@ -5,7 +5,7 @@ const MemoryLane = ({ img, text, isReversed, data_key, alt = "memories" }) => {
     return (
       <div className="row gallery-memory-lane" tabindex="0" role="region" aria-label={`image and text row number ${data_key + 1}`}>
         <div className="col-md-4">
-          <img className="left-slide" src={img} alt={alt} role="img" />
+          <img className="left-slide" src={img} alt={alt} />
         </div>
         <div className="col-md-8" role="document">
           <p>{text}</p>
@@ -19,7 +19,7 @@ const MemoryLane = ({ img, text, isReversed, data_key, alt = "memories" }) => {
           <p>{text}</p>
         </div>
         <div className="col-md-4">
-          <img className="left-slide" src={img} alt={alt} role="img" />
+          <img className="left-slide" src={img} alt={alt} />
         </div>
       </div>
     );
