@@ -55,8 +55,7 @@ const NewYear = () => {
       />
 
       <Banner
-        banner_text1={bannerData.banner_text1}
-        banner_text2={bannerData.banner_text2}
+        banner_text={bannerData.banner_text}
         txt={bannerData.text}
       />
 

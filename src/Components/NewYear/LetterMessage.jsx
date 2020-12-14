@@ -3,14 +3,14 @@ import { Zoom } from "react-awesome-reveal";
 
 const LetterMessage = ({ greeting, body }) => {
   return (
-    <>
-      <div className="letter-text" tabIndex="0" role="region" aria-label="letter-text">
-        <Zoom triggerOnce>
-          <p aria-label="letter greeting">{greeting}</p>
-          <p aria-label="letter body">{body}</p>
-        </Zoom>
-      </div>
-    </>
+    <Zoom triggerOnce>
+      <article className="letter-text" tabIndex="0" aria-label="Letter Text Container">
+        <p aria-label="Letter Text">
+          {greeting}
+          {body}
+        </p>
+      </article>
+    </Zoom>
   );
 };
 

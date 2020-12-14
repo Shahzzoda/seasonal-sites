@@ -3,24 +3,17 @@
  */
 
 // Add image and text for <Banner/> component
-// banner_text1 and banner_text2 are supposed to break the text into two lines
+// banner_text is the large text inside the of the banner component
 // If new line is not desired you can leave one empty and use the other one
 const bannerData = {
-  banner_text1: "Happy",
-  banner_text2: "Holidays",
+  banner_text: "Happy \n Holidays!",
   text: "Hey you! Hope you have a great holiday season this year.",
 };
 
 // Add text <LetterMessage/> component
 const letterMsg = {
-  greeting: "Dear Friend,",
-  body: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-  Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when
-   an unknown printer took a galley of type and scrambled it to make a type specimen book. 
-   It has survived not only five centuries, but also the leap into electronic typesetting, 
-   remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset 
-   sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like 
-   Aldus PageMaker including versions of Lorem Ipsum.`,
+  greeting: "Dear Friend,\n",
+  body: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
 };
 
 // Add image and text for <MemoryLane/> component (add as many or as little as needed)

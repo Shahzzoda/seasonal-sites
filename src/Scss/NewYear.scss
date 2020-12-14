@@ -18,6 +18,7 @@
     justify-content: center;
     h1 {
       font-family: "Mr Bedfort", cursive;
+      white-space: pre-wrap;
       text-align: center;
       vertical-align: middle;
       font-size: 10vh;
@@ -31,6 +32,9 @@
   }
   .letter-text {
     margin-bottom: 15vh;
+    p {
+      white-space: pre-wrap;
+    }
   }
   .gallery-memory-lane {
     display: flex;
