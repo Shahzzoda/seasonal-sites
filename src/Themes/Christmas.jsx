@@ -9,7 +9,7 @@ import LetterContent from "../Components/Christmas/LetterContent";
 import MemoryLane from "../Components/MemoryLane";
 import Farewell from "../Components/Christmas/Farewell";
 // import data
-import jingleBell from "../sounds/bells-trimmed.m4a";
+import jingleBell from "../Sounds/bells-trimmed.m4a";
 import {
   intro_words,
   letter_content,
@@ -25,7 +25,7 @@ const Christmas = () => {
   // initialize sound object
   const sound = new Audio(jingleBell);
   return (
-    <div className="xmas container" onClick={() => sound.play()}>
+    <div className="xmas container" onClick={() => sound.play()} role="main">
       <Banner
         msg={intro_words.msg}
         from={intro_words.from}
@@ -37,29 +37,31 @@ const Christmas = () => {
         msg={letter_content.msg}
       />
 
-      {memory_lane.map((memory) => {
+      {memory_lane.map((memory, index) => {
         isReversed = !isReversed;
         return (
           <MemoryLane
-            key={memory.img}
+            key={index}
             img={memory.img}
             text={memory.text}
             isReversed={isReversed}
+            alt={memory.alt_img_text}
+            data_key={index}
           />
         );
       })}
 
       <Farewell msg={farewell.msg} from={farewell.from} />
 
-      {/** Rendering hats and lights*/}
-      <div className="hat-rack">
-        {class_names.map((cn) => {
+      {/* Rendering hats and lights */}
+      <div className="hat-rack" aria-hidden="true">
+        {class_names.map((cn, index) => {
           return (
             <Hat
-              key={cn}
+              key={index}
               class_name={`hat hat-${cn}`}
               img="hat.png"
-              alt="christmas hat falling"
+              alt="Christmas hat falling"
             />
           );
         })}
@@ -67,11 +69,13 @@ const Christmas = () => {
       <Light
         key={0}
         img="lights.png"
+        alt="light borders"
         class_name="lights right"
       />
       <Light
         key={1}
         img="lights.png"
+        alt="light borders"
         class_name="lights left"
       />
     </div>

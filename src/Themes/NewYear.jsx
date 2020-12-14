@@ -3,7 +3,7 @@ import "../Scss/NewYear.scss";
 import React from "react";
 import { Slide } from "react-awesome-reveal";
 import Confetti from "react-confetti";
-import confettiSound from "../sounds/party-horn.wav";
+import confettiSound from "../Sounds/party-horn.wav";
 // Componenet imports
 import MemoryLane from "../Components/MemoryLane";
 import Banner from "../Components/NewYear/Banner";
@@ -21,9 +21,9 @@ import {
 const NewYear = () => {
   // initialize Sound object
   const sound = new Audio(confettiSound);
-  let img_on_right = false;
+  let isReversed = false;
   // cursor className numbers
-  const cursor_classes = [1, 2, 3, 4, 5, 6];
+  const cursor_classes_no = [1, 2, 3, 4, 5, 6];
 
   let handleMouseMovements = (e) => {
     const cursors = document.querySelectorAll(".cursor");
@@ -42,6 +42,7 @@ const NewYear = () => {
       className="nye container"
       onClick={() => sound.play()}
       onMouseMove={handleMouseMovements}
+      role="main"
     >
       <Confetti
         recycle={false}
@@ -54,8 +55,7 @@ const NewYear = () => {
       />
 
       <Banner
-        banner_text1={bannerData.banner_text1}
-        banner_text2={bannerData.banner_text2}
+        banner_text={bannerData.banner_text}
         txt={bannerData.text}
       />
 
@@ -63,34 +63,34 @@ const NewYear = () => {
 
       {/* Render Pictures and text in alternating manner */}
       <Slide cascade triggerOnce>
-        {imgTxt.map((e) => {
+        {imgTxt.map((e, index) => {
           // Flip boolean value so the compnent knows what orientation it should be
-          img_on_right = !img_on_right;
+          isReversed = !isReversed;
           return (
             <MemoryLane
-              key={e.image}
+              key={index}
               img={e.image}
               text={e.text}
-              isReversed={img_on_right}
+              isReversed={isReversed}
+              data_key={index}
+              alt={e.alt_img_text}
             />
           );
         })}
       </Slide>
 
       <FarewellMessage
-        img={farewellMsg.image}
         body={farewellMsg.body}
-        alt={"goodbye"}
       />
 
       {/* cursor content */}
-      {cursor_classes.map((cursor) => {
+      {cursor_classes_no.map((num) => {
         return (
           <Cursor
-            key={cursor}
+            key={num}
             img="light.png"
             alt="light for cursor trail"
-            class_name={`cursor cursor${cursor}`}
+            class_name={`cursor cursor${num}`}
           />
         );
       })}
