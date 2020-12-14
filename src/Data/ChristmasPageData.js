@@ -42,7 +42,7 @@ const memory_lane = [
 
 const farewell = {
   msg: "And A Happy New Year!",
-  from: "Love, zoda.",
+  from: "Love, zoda...",
 };
 
 module.exports = { intro_words, letter_content, memory_lane, farewell };

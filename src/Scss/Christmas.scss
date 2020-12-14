@@ -79,7 +79,7 @@ body,
   .gallery-memory-lane {
     display: flex;
     align-items: center;
-    margin: 0 5vh;
+    margin: 2vh 5vh;
   }
   img {
     max-width: 100%;
@@ -96,7 +96,7 @@ body,
 @media (max-device-width: 440px) and (min-device-height: 360px) {
   .xmas.xmas.container {
     .banner-words h1 {
-      font-size: 3rem;
+      font-size: 2.5rem;
     }
     .letter-content p,
     .gallery-memory-lane p {

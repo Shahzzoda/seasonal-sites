@@ -54,14 +54,14 @@ const Christmas = () => {
       <Farewell msg={farewell.msg} from={farewell.from} />
 
       {/* Rendering hats and lights */}
-      <div className="hat-rack">
-        {class_names.map((cn) => {
+      <div className="hat-rack" aria-hidden="true">
+        {class_names.map((cn, index) => {
           return (
             <Hat
-              key={cn}
+              key={index}
               class_name={`hat hat-${cn}`}
               img="hat.png"
-              alt="christmas hat falling"
+              alt="Christmas hat falling"
             />
           );
         })}
