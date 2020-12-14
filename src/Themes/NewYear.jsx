@@ -68,7 +68,7 @@ const NewYear = () => {
           isReversed = !isReversed;
           return (
             <MemoryLane
-              key={e.image}
+              key={index}
               img={e.image}
               text={e.text}
               isReversed={isReversed}

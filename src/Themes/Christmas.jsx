@@ -25,7 +25,7 @@ const Christmas = () => {
   // initialize sound object
   const sound = new Audio(jingleBell);
   return (
-    <div className="xmas container" onClick={() => sound.play()}>
+    <div className="xmas container" onClick={() => sound.play()} role="main">
       <Banner
         msg={intro_words.msg}
         from={intro_words.from}
@@ -37,22 +37,23 @@ const Christmas = () => {
         msg={letter_content.msg}
       />
 
-      {memory_lane.map((memory) => {
+      {memory_lane.map((memory, index) => {
         isReversed = !isReversed;
         return (
           <MemoryLane
-            key={memory.img}
+            key={index}
             img={memory.img}
             text={memory.text}
             isReversed={isReversed}
             alt={memory.alt_img_text}
+            data_key={index}
           />
         );
       })}
 
       <Farewell msg={farewell.msg} from={farewell.from} />
 
-      {/** Rendering hats and lights*/}
+      {/* Rendering hats and lights */}
       <div className="hat-rack">
         {class_names.map((cn) => {
           return (

@@ -8,6 +8,7 @@
     letter-spacing: 1px;
     line-height: 2;
     font-family: "Texturina";
+    white-space: pre-wrap;
   }
   .jumbotron.jumbotron-fluid {
     height: 100vh;
@@ -32,9 +33,6 @@
   }
   .letter-text {
     margin-bottom: 15vh;
-    p {
-      white-space: pre-wrap;
-    }
   }
   .gallery-memory-lane {
     display: flex;

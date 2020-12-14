@@ -15,6 +15,9 @@ body,
   justify-content: center;
   /* 12 vw bc width of light is 10vw */
   padding: 0 12vw;
+  p {
+    font-size: 1rem;
+  }
   .banner-words {
     text-align: center;
     min-height: 100vh;
@@ -24,7 +27,8 @@ body,
     h1 {
       font-family: "Oleo Script", cursive;
       color: #f5f7da;
-      font-size: 10vh;
+      white-space: pre-wrap;
+      font-size: 6rem;
       text-shadow: 5px 0 #960000;
       padding: 5vw;
     }
@@ -32,18 +36,18 @@ body,
       line-height: 1;
       font-family: monospace;
       color: #f5f7da;
-      font-size: 2vh;
       letter-spacing: 1px;
+      white-space: pre-wrap;
     }
   }
   .letter-content {
     margin-bottom: 10vh;
+    white-space: pre-wrap;
   }
   .letter-content p,
   .gallery-memory-lane p {
     font-family: "Permanent Marker", cursive;
     color: #f5f7da;
-    font-size: 1em;
     letter-spacing: 1px;
     line-height: 3;
   }
@@ -92,11 +96,11 @@ body,
 @media (max-device-width: 440px) and (min-device-height: 360px) {
   .xmas.xmas.container {
     .banner-words h1 {
-      font-size: 6vh;
+      font-size: 3rem;
     }
     .letter-content p,
     .gallery-memory-lane p {
-      font-size: 2vh;
+      font-size: 1rem;
       line-height: 2;
     }
   }
