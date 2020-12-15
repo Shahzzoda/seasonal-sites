@@ -6,3 +6,18 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+/* Some exciting button focus styles */
+*:focus { 
+  outline: rgb(97, 106, 185) solid 2px;
+}
+/* Undo all the above focused button styles
+  if the button has focus but the browser wouldn't normally
+  show default focus styles */
+*:focus:not(:focus-visible) {
+  outline: none;
+}
+/* Some even *more* exciting button focus styles */
+*:focus-visible { 
+  outline: rgb(97, 106, 185) solid 2px;
+}
