@@ -12,7 +12,7 @@ Every text and image is customizable. With these templates, you can add your own
 
 # Pre-reqs:
 
-1. npm
+1. Node.js & npm
 2. Github account (to download and host)
 3. Some programming knowledge to dig around and debug in case something goes wrong.
 
