@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/seasonal-sites/static/css/main.40322e0e.chunk.css",
+    "main.js": "/seasonal-sites/static/js/main.c59dbdf7.chunk.js",
+    "main.js.map": "/seasonal-sites/static/js/main.c59dbdf7.chunk.js.map",
+    "runtime-main.js": "/seasonal-sites/static/js/runtime-main.809d484d.js",
+    "runtime-main.js.map": "/seasonal-sites/static/js/runtime-main.809d484d.js.map",
+    "static/js/2.95344932.chunk.js": "/seasonal-sites/static/js/2.95344932.chunk.js",
+    "static/js/2.95344932.chunk.js.map": "/seasonal-sites/static/js/2.95344932.chunk.js.map",
+    "index.html": "/seasonal-sites/index.html",
+    "static/css/main.40322e0e.chunk.css.map": "/seasonal-sites/static/css/main.40322e0e.chunk.css.map",
+    "static/js/2.95344932.chunk.js.LICENSE.txt": "/seasonal-sites/static/js/2.95344932.chunk.js.LICENSE.txt",
+    "static/media/bells-trimmed.e4232019.m4a": "/seasonal-sites/static/media/bells-trimmed.e4232019.m4a",
+    "static/media/party-horn.7497d7c5.wav": "/seasonal-sites/static/media/party-horn.7497d7c5.wav"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.809d484d.js",
+    "static/js/2.95344932.chunk.js",
+    "static/css/main.40322e0e.chunk.css",
+    "static/js/main.c59dbdf7.chunk.js"
+  ]
+}
