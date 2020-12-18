@@ -1,9 +1,7 @@
 import "./App.css";
 import React from "react";
 import { useInput } from "./input-hook";
-import { intro_words, letter_content, farewell } from "./Data/ChristmasPageData";
-
-
+import { intro_words, letter_content, farewell } from "./DefaultData/ChristmasPageData";
 
 function App() {
   const { value: openingText, bind: bindOpeningText } = useInput(intro_words.msg)
