@@ -16,11 +16,11 @@ function App() {
     event.preventDefault();
     console.log("testing data save: ", openingText);
   }
-
   return (
     <div className="container" >
       <h1>Fill out the following information</h1>
       <form>
+        {/* TODO: create seperate component to adhere to DRY principles v.v */}
         <label>Banner Opening Text:</label>
         <input type="text" value={openingText} {...bindOpeningText} />
         <label>From:</label>
