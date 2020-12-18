@@ -21,21 +21,21 @@ function App() {
     <div className="container" >
       <h1>Fill out the following information</h1>
       <form>
-        <label htmlFor="fname">Banner Opening Text:</label>
-        <input type="text" name="welcomeText" value={openingText} {...bindOpeningText} />
-        <label htmlFor="lname">From:</label>
-        <input type="text" id="lname" name="lname" value={from} {...bindFrom} />
-        <label htmlFor="fname">To:</label>
+        <label>Banner Opening Text:</label>
+        <input type="text" value={openingText} {...bindOpeningText} />
+        <label>From:</label>
+        <input value={from} {...bindFrom} />
+        <label>To:</label>
         <input type="text" value={to} {...bindTo} />
-        <label htmlFor="lname">Greeting:</label>
-        <input type="text" id="lname" name="lname" value={letterGreeting} {...bindLetterGreeting} />
-        <label htmlFor="fname">Letter Text:</label>
+        <label>Greeting:</label>
+        <input value={letterGreeting} {...bindLetterGreeting} />
+        <label>Letter Text:</label>
         <input type="text" value={letterText} {...bindLetterText} />
-        <label htmlFor="lname">Banner Closing Text:</label>
-        <input type="text" id="lname" name="lname" value={closingText} {...bindClosingText} />
-        <label htmlFor="fname">Sign off:</label>
+        <label>Banner Closing Text:</label>
+        <input value={closingText} {...bindClosingText} />
+        <label>Sign off:</label>
         <input type="text" value={signOff} {...bindSignOff} />
-        <button value="Submit" onClick={handleSubmit}>Submit</button>
+        <button onClick={handleSubmit}>Submit</button>
       </form>
     </div>
   );
