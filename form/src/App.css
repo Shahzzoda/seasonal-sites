@@ -3,10 +3,11 @@
   margin-bottom: 5vh;
 }
 
-label, input {
-    display: block;
-    width: 100%;
-    margin: 0;
+label,
+input {
+  display: block;
+  width: 100%;
+  margin: 0;
 }
 
 input {
@@ -17,8 +18,28 @@ input {
   font-family: monospace;
 }
 
-input[type=submit] {
+input[type="submit"] {
   font-family: initial;
   color: green;
   padding: 10px;
+}
+
+.sign-in-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+}
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+}
+
+.sign-in {
+  color: #282c34;
+  background: white;
+  max-width: 400px;
+  margin: 100px auto;
 }
