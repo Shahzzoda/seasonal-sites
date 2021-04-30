@@ -50,12 +50,18 @@ const Form = ({ storage, firestore, user }) => {
   const handleUpload = async () => {
     console.log("Uploading Files to storage bucket...");
     const urltemp = await [...files].map(async (file) => {
-      const snapshot = await storage.child(`${file.name}`).put(file);
+      const snapshot = await storage
+        .ref(user.displayName)
+        .child(`${file.name}`)
+        .put(file);
       console.log(
         `Uploade Successful!!! 
         \nBytes Transferred:${snapshot.bytesTransferred}`
       );
-      const url = await storage.child(file.name).getDownloadURL();
+      const url = await storage
+        .ref(user.displayName)
+        .child(file.name)
+        .getDownloadURL();
       return url;
     });
     return Promise.all(urltemp).then((values) => values);

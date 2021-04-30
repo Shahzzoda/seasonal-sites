@@ -4,6 +4,7 @@ import SignOut from "./Components/SignOut";
 import { useAuthState } from "react-firebase-hooks/auth";
 
 const App = ({ auth, storage, firestore, firebase }) => {
+  // Google user object. Contains many userful attributes we can use
   const [user] = useAuthState(auth);
   return (
     <>

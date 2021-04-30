@@ -14,7 +14,7 @@ firebase.initializeApp(firebaseConfig);
 
 const auth = firebase.auth();
 const firestore = firebase.firestore();
-const storage = firebase.storage().ref("Images");
+const storage = firebase.storage();
 
 ReactDOM.render(
   <React.StrictMode>
