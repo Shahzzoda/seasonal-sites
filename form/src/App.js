@@ -1,6 +1,5 @@
 import "./App.css";
 import React, { useState } from "react";
-import { useInput } from "./input-hook";
 import {
   intro_words,
   letter_content,
@@ -8,37 +7,39 @@ import {
 } from "./DefaultData/ChristmasPageData";
 import firebase from "firebase/app";
 
+const db = firebase.firestore();
+const storage = firebase.storage().ref("Images");
+
 function App() {
-  var db = firebase.firestore();
-  const storage = firebase.storage().ref("Images");
-
-  const [files, setFiles] = useState(null);
-  const urls = [];
-
-  const { value: openingText, bind: bindOpeningText } = useInput(
-    intro_words.msg
-  );
-  const { value: from, bind: bindFrom } = useInput(intro_words.from);
-  const { value: to, bind: bindTo } = useInput(intro_words.to);
-  const { value: letterGreeting, bind: bindLetterGreeting } = useInput(
-    letter_content.greeting
-  );
-  const { value: letterText, bind: bindLetterText } = useInput(
-    letter_content.msg
-  );
-  const { value: closingText, bind: bindClosingText } = useInput(farewell.msg);
-  const { value: signOff, bind: bindSignOff } = useInput(farewell.from);
+  const [files, setFiles] = useState([]);
+  const [urls, setUrls] = useState([]);
+  const [openingText, setOpeningText] = useState(intro_words.msg);
+  const [from, setFrom] = useState(intro_words.from);
+  const [to, setTo] = useState(intro_words.to);
+  const [letterGreeting, setLetterGreeting] = useState(letter_content.greeting);
+  const [letterText, setLetterText] = useState(letter_content.msg);
+  const [closingText, setClosingText] = useState(farewell.msg);
+  const [signOff, setSignOff] = useState(farewell.from);
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    console.log("Uploading Files to storage bucket...");
-    await handleUpload();
-    console.log("testing data save: ", openingText);
-    db.collection("users")
+    const urlTemp = await handleUpload();
+    setUrls([...urlTemp]);
+    handleFireStoreWrite();
+  };
+
+  const handleFireStoreWrite = () => {
+    console.log("Writing to firestore");
+    db.collection("SiteData")
       .add({
-        first: "Ada",
-        last: "Lovelace",
-        born: 1815,
+        openingText,
+        from,
+        to,
+        letterGreeting,
+        letterText,
+        closingText,
+        signOff,
+        images: urls,
       })
       .then((docRef) => {
         console.log("Document written with ID: ", docRef.id);
@@ -49,43 +50,61 @@ function App() {
   };
 
   const handleUpload = async () => {
-    for (let i = 0; i < files.length; i++) {
-      storage
-        .child(`${files[i].name}`)
-        .put(files[i])
-        .then((snapshot) => {
-          console.log(
-            `Uploade Successful!!! \nBytes Transferred:${snapshot.bytesTransferred} `
-          );
-        })
-        .then((res) => {
-          storage
-            .child(files[i].name)
-            .getDownloadURL()
-            .then((res) => urls.push(res));
-        });
-    }
+    console.log("Uploading Files to storage bucket...");
+    const urltemp = await [...files].map(async (file) => {
+      const snapshot = await storage.child(`${file.name}`).put(file);
+      console.log(
+        `Uploade Successful!!! 
+        \nBytes Transferred:${snapshot.bytesTransferred}`
+      );
+      const url = await storage.child(file.name).getDownloadURL();
+      return url;
+    });
+    return Promise.all(urltemp).then((values) => values);
   };
+
   return (
     <div className="container">
       <h1>Fill out the following information</h1>
       <form>
         {/* TODO: create seperate component to adhere to DRY principles v.v */}
         <label>Banner Opening Text:</label>
-        <input type="text" value={openingText} {...bindOpeningText} />
+        <input
+          type="text"
+          value={openingText}
+          onChange={(e) => setOpeningText(e.target.value)}
+        />
         <label>From:</label>
-        <input value={from} {...bindFrom} />
+        <input value={from} onChange={(e) => setFrom(e.target.value)} />
         <label>To:</label>
-        <input type="text" value={to} {...bindTo} />
+        <input type="text" value={to} onChange={(e) => setTo(e.target.value)} />
         <label>Greeting:</label>
-        <input value={letterGreeting} {...bindLetterGreeting} />
+        <input
+          value={letterGreeting}
+          onChange={(e) => setLetterGreeting(e.target.value)}
+        />
         <label>Letter Text:</label>
-        <input type="text" value={letterText} {...bindLetterText} />
+        <input
+          type="text"
+          value={letterText}
+          onChange={(e) => setLetterText(e.target.value)}
+        />
         <label>Banner Closing Text:</label>
-        <input value={closingText} {...bindClosingText} />
+        <input
+          value={closingText}
+          onChange={(e) => setClosingText(e.target.value)}
+        />
         <label>Sign off:</label>
-        <input type="text" value={signOff} {...bindSignOff} />
-        <input type="file" onChange={(e) => setFiles(e.target.files)}></input>
+        <input
+          type="text"
+          value={signOff}
+          onChange={(e) => setSignOff(e.target.value)}
+        />
+        <input
+          type="file"
+          onChange={(e) => setFiles(e.target.files)}
+          multiple
+        ></input>
         <button onClick={handleSubmit}>Submit</button>
       </form>
     </div>
