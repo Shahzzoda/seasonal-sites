@@ -7,10 +7,10 @@ import {
 } from "./DefaultData/ChristmasPageData";
 import firebase from "firebase/app";
 
-const db = firebase.firestore();
-const storage = firebase.storage().ref("Images");
-
 function App() {
+  const db = firebase.firestore();
+  const storage = firebase.storage().ref("Images");
+
   const [files, setFiles] = useState([]);
   const [urls, setUrls] = useState([]);
   const [openingText, setOpeningText] = useState(intro_words.msg);
