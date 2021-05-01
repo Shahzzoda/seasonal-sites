@@ -34,12 +34,41 @@ input[type="submit"] {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 20px;
   height: 200px;
 }
 
 .sign-in {
   color: #282c34;
-  background: white;
-  max-width: 400px;
-  margin: 100px auto;
+  background: rgb(147, 212, 191);
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.2em 1.45em;
+  margin: 0.1em;
+  border: 0.15em solid #cccccc;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Segoe UI", "Roboto", sans-serif;
+  font-weight: 400;
+  color: #000000;
+  text-align: center;
+  position: relative;
+}
+
+.btn:hover {
+  border-color: #7a7a7a;
+}
+
+.btn-signout {
+  background-color: #eec9bd;
+}
+
+.btn-submit {
+  background-color: hsl(93, 42%, 75%);
+}
+
+.btn-signin {
+  background-color: #e9dc93;
 }

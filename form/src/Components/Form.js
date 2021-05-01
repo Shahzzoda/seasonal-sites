@@ -109,7 +109,9 @@ const Form = ({ storage, firestore, user }) => {
           onChange={(e) => setFiles(e.target.files)}
           multiple
         ></input>
-        <button onClick={handleSubmit}>Submit</button>
+        <button className="btn btn-submit" onClick={handleSubmit}>
+          Submit
+        </button>
       </form>
     </div>
   );

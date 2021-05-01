@@ -8,16 +8,17 @@ const App = ({ auth, storage, firestore, firebase }) => {
   const [user] = useAuthState(auth);
   return (
     <>
-      <div className="center">
-        <SignOut auth={auth} />
-      </div>
       {user ? (
         <Form firestore={firestore} storage={storage} user={user} />
       ) : (
-        <div className="center">
+        <div className="center  sign-in">
           <SignIn auth={auth} firebase={firebase} />
         </div>
       )}
+
+      <div className="center">
+        <SignOut auth={auth} />
+      </div>
     </>
   );
 };
