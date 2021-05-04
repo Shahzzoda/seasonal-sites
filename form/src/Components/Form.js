@@ -20,7 +20,7 @@ const Form = ({ storage, firestore, user }) => {
   const handleSubmit = async (event) => {
     event.preventDefault();
     const urlTemp = await handleUpload();
-    setUrls([...urlTemp]);
+    setUrls(urlTemp);
     handleFireStoreWrite();
   };
 
@@ -49,22 +49,20 @@ const Form = ({ storage, firestore, user }) => {
 
   const handleUpload = async () => {
     console.log("Uploading Files to storage bucket...");
-    const urltemp = await [...files].map(async (file) => {
-      const snapshot = await storage
-        .ref(user.displayName)
-        .child(`${file.name}`)
-        .put(file);
-      console.log(
-        `Uploade Successful!!! 
-        \nBytes Transferred:${snapshot.bytesTransferred}`
-      );
-      const url = await storage
+    const urlsPromise = [...files].map(async (file) => {
+      await storage
         .ref(user.displayName)
         .child(file.name)
-        .getDownloadURL();
-      return url;
-    });
-    return Promise.all(urltemp).then((values) => values);
+        .put(file)
+        .then((e) => {
+          console.log("upload state:", e.state, "| bytes:", e.bytesTransferred)
+        })
+      return await storage
+        .ref(user.displayName)
+        .child(file.name)
+        .getDownloadURL()
+    })
+    return await Promise.all(urlsPromise);
   };
 
   return (
