@@ -11,9 +11,7 @@ const App = ({ auth, storage, firestore, firebase }) => {
       {user ? (
         <Form firestore={firestore} storage={storage} user={user} />
       ) : (
-        <div className="center  sign-in">
-          <SignIn auth={auth} firebase={firebase} />
-        </div>
+        <SignIn auth={auth} firebase={firebase} />
       )}
 
       <div className="center">
