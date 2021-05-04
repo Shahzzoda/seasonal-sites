@@ -4,20 +4,30 @@ const SignIn = ({ firebase, auth }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [formDisplay, setFormDisplay] = useState("none")
+  const [formError, setFormError] = useState("");
 
   const signInWithGoogle = () => {
     const provider = new firebase.auth.GoogleAuthProvider();
-    auth.signInWithPopup(provider);
+    auth.signInWithPopup(provider)
+      .catch((error) => {
+        setFormError(error.message)
+      });
   };
 
   const signInWithEmail = (event) => {
     event.preventDefault();
     firebase.auth().signInWithEmailAndPassword(email, password)
+      .catch((error) => {
+        setFormError(error.message)
+      });
   }
 
   const signUpWithEmail = (event) => {
     event.preventDefault();
     firebase.auth().createUserWithEmailAndPassword(email, password)
+      .catch((error) => {
+        setFormError(error.message)
+      });
   }
 
   const handleDisplay = (display) => {
@@ -94,6 +104,7 @@ const SignIn = ({ firebase, auth }) => {
 
   return (
     <div class="center sign-in">
+      { formError && <div class="erorr"><p>{formError}</p></div>}
       <button className="btn btn-signin" onClick={signInWithGoogle}>
         Sign in or sign up with Google
       </button>
