@@ -103,8 +103,8 @@ const SignIn = ({ firebase, auth }) => {
   )
 
   return (
-    <div class="center sign-in">
-      { formError && <div class="erorr"><p>{formError}</p></div>}
+    <div className="center sign-in">
+      { formError && <div className="erorr"><p>{formError}</p></div>}
       <button className="btn btn-signin" onClick={signInWithGoogle}>
         Sign in or sign up with Google
       </button>
