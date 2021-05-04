@@ -26,60 +26,79 @@ const SignIn = ({ firebase, auth }) => {
     setFormDisplay(display)
   }
 
+  const signInForm = (
+    <form>
+      <label htmlFor="email">Email:</label>
+      <input
+        type="email"
+        name="email"
+        value={email}
+        onChange={(e) => setEmail(e.target.value)}
+      />
+      <label htmlFor="password">Password:</label>
+      <input
+        type="password"
+        name="password"
+        value={password}
+        onChange={(e) => setPassword(e.target.value)}
+      />
+      <button
+        type="submit"
+        className="btn btn-signin"
+        onClick={(e) => signInWithEmail(e)}
+      >
+        Sign in with Email
+      </button>
+    </form>
+  )
+
+  const signInButton = (
+    <button
+      className="btn btn-signin"
+      onClick={() => handleDisplay('sign-in')}
+    >
+      Sign in with Email
+    </button>
+  )
+
+  const signUpForm = (
+    <form>
+      <label htmlFor="email">Email:</label>
+      <input
+        type="email"
+        name="email"
+        value={email}
+        onChange={(e) => setEmail(e.target.value)}
+      />
+      <label htmlFor="password">Password:</label>
+      <input
+        type="password"
+        name="password"
+        value={password}
+        onChange={(e) => setPassword(e.target.value)} />
+      <button
+        type="submit"
+        className="btn btn-signin"
+        onClick={(e) => signUpWithEmail(e)}
+      >
+        Sign up with Email
+      </button>
+    </form>
+  )
+
+  const signUpButton = (
+    <button className="btn btn-signin" onClick={() => handleDisplay('sign-up')}>
+      Sign up with Email
+    </button>
+  )
+
   return (
     <div class="center sign-in">
       <button className="btn btn-signin" onClick={signInWithGoogle}>
         Sign in or sign up with Google
       </button>
-      {
-        formDisplay === 'sign-in' ? (
-          <form>
-            <label htmlFor="email">Email:</label>
-            <input
-              type="email"
-              name="email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-            />
-            <label htmlFor="password">Password:</label>
-            <input
-              type="password"
-              name="password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-            />
-            <button className="btn btn-signin" onClick={(e) => signInWithEmail(e)}>
-              Sign in with Email
-            </button>
-          </form>
-        ) : (
-          <button className="btn btn-signin" onClick={() => handleDisplay('sign-in')}>
-            Sign in with Email
-          </button>
-        )
-      }
-      {
-        formDisplay === 'sign-up' ? (
-          <form>
-            <label htmlFor="email">Email:</label>
-            <input
-              type="email"
-              name="email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-            />
-            <label htmlFor="password">Password:</label>
-            <input type="password" name="password" value={password} onChange={(e) => setPassword(e.target.value)} />
-            <button className="btn btn-signin" onClick={(e) => signUpWithEmail(e)}>
-              Sign up with Email
-            </button>
-          </form>
-        ) : (
-          <button className="btn btn-signin" onClick={() => handleDisplay('sign-up')}>
-            Sign up with Email
-          </button>
-        )
-      }
+      { formDisplay === 'sign-in' ? signInForm : signInButton}
+      { formDisplay === 'sign-up' ? signUpForm : signUpButton}
     </div>
   );
 };
