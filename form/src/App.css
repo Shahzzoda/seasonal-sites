@@ -24,23 +24,21 @@ input[type="submit"] {
   padding: 10px;
 }
 
-.sign-in-div {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 200px;
-}
 .center {
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 20px;
-  height: 200px;
+  flex-direction: column;
 }
 
 .sign-in {
   color: #282c34;
   background: rgb(147, 212, 191);
+}
+
+form {
+  margin-bottom: 30px;
 }
 
 .btn {
