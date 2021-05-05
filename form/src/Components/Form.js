@@ -4,7 +4,7 @@ import {
   intro_words,
   letter_content,
   farewell,
-} from "../DefaultData/ChristmasPageData";
+} from "../Data/ChristmasPageData";
 
 const Form = ({ storage, firestore, user }) => {
   const [files, setFiles] = useState([]);

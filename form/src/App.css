@@ -50,6 +50,7 @@ form {
 
 .error p {
   color: white;
+  margin: 0;
 }
 
 .btn {
