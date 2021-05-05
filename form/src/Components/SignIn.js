@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import errorDesc from "../Data/ErrorCodes";
 
 const SignIn = ({ firebase, auth }) => {
   const [email, setEmail] = useState("");
@@ -10,7 +11,8 @@ const SignIn = ({ firebase, auth }) => {
     const provider = new firebase.auth.GoogleAuthProvider();
     auth.signInWithPopup(provider)
       .catch((error) => {
-        setFormError(error.message)
+        const errorMessage = errorDesc[error.code];
+        setFormError(errorMessage);
       });
   };
 
@@ -18,7 +20,8 @@ const SignIn = ({ firebase, auth }) => {
     event.preventDefault();
     firebase.auth().signInWithEmailAndPassword(email, password)
       .catch((error) => {
-        setFormError(error.message)
+        const errorMessage = errorDesc[error.code];
+        setFormError(errorMessage);
       });
   }
 
@@ -26,15 +29,16 @@ const SignIn = ({ firebase, auth }) => {
     event.preventDefault();
     firebase.auth().createUserWithEmailAndPassword(email, password)
       .catch((error) => {
-        setFormError(error.message)
+        const errorMessage = errorDesc[error.code];
+        setFormError(errorMessage);
       });
-  }
+  };
 
   const handleDisplay = (display) => {
     setPassword("");
     setEmail("");
     setFormDisplay(display)
-  }
+  };
 
   const signInForm = (
     <form>
@@ -60,7 +64,7 @@ const SignIn = ({ firebase, auth }) => {
         Sign in with Email
       </button>
     </form>
-  )
+  );
 
   const signInButton = (
     <button
@@ -69,7 +73,7 @@ const SignIn = ({ firebase, auth }) => {
     >
       Sign in with Email
     </button>
-  )
+  );
 
   const signUpForm = (
     <form>
@@ -94,22 +98,22 @@ const SignIn = ({ firebase, auth }) => {
         Sign up with Email
       </button>
     </form>
-  )
+  );
 
   const signUpButton = (
     <button className="btn btn-signin" onClick={() => handleDisplay('sign-up')}>
       Sign up with Email
     </button>
-  )
+  );
 
   return (
     <div className="center sign-in">
-      { formError && <div className="erorr"><p>{formError}</p></div>}
+      {formError && <div className="error"><p>{formError}</p></div>}
       <button className="btn btn-signin" onClick={signInWithGoogle}>
         Sign in or sign up with Google
       </button>
-      { formDisplay === 'sign-in' ? signInForm : signInButton}
-      { formDisplay === 'sign-up' ? signUpForm : signUpButton}
+      {formDisplay === 'sign-in' ? signInForm : signInButton}
+      {formDisplay === 'sign-up' ? signUpForm : signUpButton}
     </div>
   );
 };
