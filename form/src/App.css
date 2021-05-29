@@ -11,7 +11,7 @@ input {
 }
 
 input {
-  margin-bottom: 4vh;
+  margin: 2vh 0;
   border: none;
   border-bottom: 1px solid grey;
   color: grey;
@@ -22,6 +22,19 @@ input[type="submit"] {
   font-family: initial;
   color: green;
   padding: 10px;
+ margin: 2vh 0;
+}
+
+input[type="file"] {
+  display: none;
+}
+
+.file-upload {
+  text-align: center;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  display: inline-block;
+  padding: 6px 12px;
+  cursor: pointer;
 }
 
 .center {

@@ -65,6 +65,11 @@ const Form = ({ storage, firestore, user }) => {
     return await Promise.all(urlsPromise);
   };
 
+  const handleFileUploads = (event) => {
+    console.log("event:", event);
+    console.log("number of images:", event.target.files.length);
+  }
+
   return (
     <div className="container">
       <h1>Fill out the following information {user.displayName}</h1>
@@ -102,11 +107,15 @@ const Form = ({ storage, firestore, user }) => {
           value={signOff}
           onChange={(e) => setSignOff(e.target.value)}
         />
-        <input
-          type="file"
-          onChange={(e) => setFiles(e.target.files)}
-          multiple
-        ></input>
+        <label class="file-upload">
+          + Add Images
+          <input
+            type="file"
+            accept="image/*"
+            onChange={(e) => handleFileUploads(e)}
+            multiple
+          ></input>
+        </label>
         <button className="btn btn-submit" onClick={handleSubmit}>
           Submit
         </button>
