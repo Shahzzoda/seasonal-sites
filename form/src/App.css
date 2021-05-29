@@ -3,6 +3,7 @@
   margin-bottom: 5vh;
 }
 
+/* form input styles */
 label,
 input {
   display: block;
@@ -94,4 +95,10 @@ form {
 
 .btn-signin {
   background-color: #e9dc93;
+}
+
+/* memory lane pics */
+.memory-lane-images img {
+  width: 20vw;
+  height: auto;
 }

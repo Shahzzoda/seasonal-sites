@@ -7,8 +7,8 @@ import {
 } from "../Data/ChristmasPageData";
 
 const Form = ({ storage, firestore, user }) => {
-  const [files, setFiles] = useState([]);
   const [urls, setUrls] = useState([]);
+  const [images, setImages] = useState([])
   const [openingText, setOpeningText] = useState(intro_words.msg);
   const [from, setFrom] = useState(user.displayName);
   const [to, setTo] = useState(intro_words.to);
@@ -47,7 +47,7 @@ const Form = ({ storage, firestore, user }) => {
       });
   };
 
-  const handleUpload = async () => {
+  const handleUpload = async (files) => {
     console.log("Uploading Files to storage bucket...");
     const urlsPromise = [...files].map(async (file) => {
       await storage
@@ -66,8 +66,13 @@ const Form = ({ storage, firestore, user }) => {
   };
 
   const handleFileUploads = (event) => {
-    console.log("event:", event);
     console.log("number of images:", event.target.files.length);
+    handleUpload(event.target.files)
+      .then((imgUrls) => {
+        setUrls(urls.concat(imgUrls));
+        const newImgs = imgUrls.map((item, i) => { <img key={images.length + i} src={item} /> })
+        setImages(images.concat(newImgs));
+      })
   }
 
   return (
@@ -107,7 +112,12 @@ const Form = ({ storage, firestore, user }) => {
           value={signOff}
           onChange={(e) => setSignOff(e.target.value)}
         />
-        <label class="file-upload">
+
+        <div className="memory-lane-images row">
+          {images}
+        </div>
+
+        <label className="file-upload">
           + Add Images
           <input
             type="file"
