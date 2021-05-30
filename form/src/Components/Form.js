@@ -8,19 +8,17 @@ import {
 
 const Form = ({ storage, firestore, user }) => {
   const [urls, setUrls] = useState([]);
-  const [images, setImages] = useState([])
   const [openingText, setOpeningText] = useState(intro_words.msg);
   const [from, setFrom] = useState(user.displayName);
   const [to, setTo] = useState(intro_words.to);
   const [letterGreeting, setLetterGreeting] = useState(letter_content.greeting);
   const [letterText, setLetterText] = useState(letter_content.msg);
+  const [laneObjs, setLaneObjs] = useState([{}])
   const [closingText, setClosingText] = useState(farewell.msg);
   const [signOff, setSignOff] = useState(farewell.from);
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    const urlTemp = await handleUpload();
-    setUrls(urlTemp);
     handleFireStoreWrite();
   };
 
@@ -38,6 +36,7 @@ const Form = ({ storage, firestore, user }) => {
         closingText,
         signOff,
         images: urls,
+        memoryLaneImgs: laneObjs
       })
       .then((docRef) => {
         console.log("Document written with ID: ", docRef.id);
@@ -70,9 +69,22 @@ const Form = ({ storage, firestore, user }) => {
     handleUpload(event.target.files)
       .then((imgUrls) => {
         setUrls(urls.concat(imgUrls));
-        const newImgs = imgUrls.map((item, i) => { <img key={images.length + i} src={item} /> })
-        setImages(images.concat(newImgs));
       })
+  }
+
+  const handleMemoryLane = (i, link, text) => {
+    const memoryObj = { text: text, link: link }
+    if (i + 1 > laneObjs.length) {
+      setLaneObjs(laneObjs.concat(memoryObj))
+    } else {
+      const newLaneObjs = laneObjs.map((obj, index) => {
+        if (i == index) {
+          return memoryObj
+        }
+        return obj
+      })
+      setLaneObjs(newLaneObjs)
+    }
   }
 
   return (
@@ -112,11 +124,17 @@ const Form = ({ storage, firestore, user }) => {
           value={signOff}
           onChange={(e) => setSignOff(e.target.value)}
         />
-
-        <div className="memory-lane-images row">
-          {images}
-        </div>
-
+        {urls.map((url, i) =>
+          <div className="memory-lane-images row" key={i}>
+            <img className="col-4" src={url} />
+            <input className="col-8"
+              type="text"
+              value={laneObjs[i] ? laneObjs[i].text : "some text"}
+              onChange={(e) => handleMemoryLane(i, url, e.target.value)}
+            />
+          </div>
+        )
+        }
         <label className="file-upload">
           + Add Images
           <input
