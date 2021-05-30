@@ -102,3 +102,16 @@ form {
   width: 20vw;
   height: auto;
 }
+
+.memory-lane-images div {
+  align-self: center;
+}
+
+.memory-lane-images span {
+  align-self: center;
+  vertical-align: middle;
+  padding: 5px;
+  color: white;
+  background: #2196f3;
+  border-radius: 25%;
+}

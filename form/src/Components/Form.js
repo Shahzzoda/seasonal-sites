@@ -13,7 +13,7 @@ const Form = ({ storage, firestore, user }) => {
   const [to, setTo] = useState(intro_words.to);
   const [letterGreeting, setLetterGreeting] = useState(letter_content.greeting);
   const [letterText, setLetterText] = useState(letter_content.msg);
-  const [laneObjs, setLaneObjs] = useState([{}])
+  const [laneObjs, setLaneObjs] = useState([])
   const [closingText, setClosingText] = useState(farewell.msg);
   const [signOff, setSignOff] = useState(farewell.from);
 
@@ -127,11 +127,12 @@ const Form = ({ storage, firestore, user }) => {
         {urls.map((url, i) =>
           <div className="memory-lane-images row" key={i}>
             <img className="col-4" src={url} />
-            <input className="col-8"
+            <input className="col-7"
               type="text"
               value={laneObjs[i] ? laneObjs[i].text : "some text"}
               onChange={(e) => handleMemoryLane(i, url, e.target.value)}
             />
+            <div className="col-1"><span>x</span></div>
           </div>
         )
         }
