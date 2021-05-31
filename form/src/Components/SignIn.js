@@ -4,30 +4,33 @@ import errorDesc from "../Data/ErrorCodes";
 const SignIn = ({ firebase, auth }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [formDisplay, setFormDisplay] = useState("none")
+  const [formDisplay, setFormDisplay] = useState("none");
   const [formError, setFormError] = useState("");
 
   const signInWithGoogle = () => {
     const provider = new firebase.auth.GoogleAuthProvider();
-    auth.signInWithPopup(provider)
+    auth.signInWithPopup(provider).catch((error) => {
+      const errorMessage = errorDesc[error.code];
+      setFormError(errorMessage);
+    });
+  };
+
+  const signInWithEmail = (event) => {
+    event.preventDefault();
+    firebase
+      .auth()
+      .signInWithEmailAndPassword(email, password)
       .catch((error) => {
         const errorMessage = errorDesc[error.code];
         setFormError(errorMessage);
       });
   };
 
-  const signInWithEmail = (event) => {
-    event.preventDefault();
-    firebase.auth().signInWithEmailAndPassword(email, password)
-      .catch((error) => {
-        const errorMessage = errorDesc[error.code];
-        setFormError(errorMessage);
-      });
-  }
-
   const signUpWithEmail = (event) => {
     event.preventDefault();
-    firebase.auth().createUserWithEmailAndPassword(email, password)
+    firebase
+      .auth()
+      .createUserWithEmailAndPassword(email, password)
       .catch((error) => {
         const errorMessage = errorDesc[error.code];
         setFormError(errorMessage);
@@ -37,10 +40,10 @@ const SignIn = ({ firebase, auth }) => {
   const handleDisplay = (display) => {
     setPassword("");
     setEmail("");
-    setFormDisplay(display)
+    setFormDisplay(display);
   };
 
-  const signInForm = (
+  const signInUpForm = (
     <form>
       <label htmlFor="email">Email:</label>
       <input
@@ -61,59 +64,43 @@ const SignIn = ({ firebase, auth }) => {
         className="btn btn-signin"
         onClick={(e) => signInWithEmail(e)}
       >
-        Sign in with Email
+        Sign in
       </button>
-    </form>
-  );
-
-  const signInButton = (
-    <button
-      className="btn btn-signin"
-      onClick={() => handleDisplay('sign-in')}
-    >
-      Sign in with Email
-    </button>
-  );
-
-  const signUpForm = (
-    <form>
-      <label htmlFor="email">Email:</label>
-      <input
-        type="email"
-        name="email"
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
-      />
-      <label htmlFor="password">Password:</label>
-      <input
-        type="password"
-        name="password"
-        value={password}
-        onChange={(e) => setPassword(e.target.value)} />
       <button
         type="submit"
         className="btn btn-signin"
         onClick={(e) => signUpWithEmail(e)}
       >
-        Sign up with Email
+        Sign Up
       </button>
     </form>
   );
 
   const signUpButton = (
-    <button className="btn btn-signin" onClick={() => handleDisplay('sign-up')}>
-      Sign up with Email
+    <button className="btn btn-signin" onClick={() => handleDisplay("sign-up-in")}>
+      Sign in or up with Email{" "}
+      <img
+        alt="Logo"
+        src="https://img.icons8.com/doodle/48/000000/apple-mail.png"
+      />
     </button>
   );
 
   return (
     <div className="center sign-in">
-      {formError && <div className="error"><p>{formError}</p></div>}
+      {formError && (
+        <div className="error">
+          <p>{formError}</p>
+        </div>
+      )}
+      {formDisplay === "sign-up-in" ? signInUpForm : signUpButton}
       <button className="btn btn-signin" onClick={signInWithGoogle}>
-        Sign in or sign up with Google
+        Sign in or sign up with{" "}
+        <img
+          alt="Logo"
+          src="https://img.icons8.com/offices/30/000000/google-logo.png"
+        />
       </button>
-      {formDisplay === 'sign-in' ? signInForm : signInButton}
-      {formDisplay === 'sign-up' ? signUpForm : signUpButton}
     </div>
   );
 };

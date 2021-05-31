@@ -58,6 +58,7 @@ form {
   padding: 0.2em 1.45em;
   margin: 0.1em;
   border: 0.15em solid #cccccc;
+  border-radius: 5px;
   box-sizing: border-box;
   text-decoration: none;
   font-family: "Segoe UI", "Roboto", sans-serif;
