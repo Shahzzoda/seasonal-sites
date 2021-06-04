@@ -1,5 +1,5 @@
 import "../App.css";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import {
   intro_words,
   letter_content,
@@ -69,12 +69,20 @@ const Form = ({ storage, firestore, user }) => {
     handleUpload(event.target.files)
       .then((imgUrls) => {
         setUrls(urls.concat(imgUrls));
+        const memoryObjs = imgUrls.map((url) => {
+          return { url: url, text: "some text" }
+        })
+        setLaneObjs(laneObjs.concat(memoryObjs))
+        console.log("upload finish, laneObjs:", laneObjs);
+        console.log("upload finish, urls:", urls)
       })
   }
 
-  const handleMemoryLane = (i, link, text) => {
-    const memoryObj = { text: text, link: link }
-    if (i + 1 > laneObjs.length) {
+  const handleMemoryLane = (i, url, text) => {
+    console.log("in handleMemoryLane laneObjs:", i, laneObjs)
+    console.log("in handleMemoryLane urls:", i, urls)
+    const memoryObj = { text: text, url: url }
+    if (i > laneObjs.length) {
       setLaneObjs(laneObjs.concat(memoryObj))
     } else {
       const newLaneObjs = laneObjs.map((obj, index) => {
@@ -85,6 +93,22 @@ const Form = ({ storage, firestore, user }) => {
       })
       setLaneObjs(newLaneObjs)
     }
+  }
+
+  // useEffect(() => {
+  //   console.log("rerendering:", urls, laneObjs)
+  // }, [urls, laneObjs])
+
+  const handleDelete = (i) => {
+    storage.refFromURL(urls[i]).delete()
+      .then(() =>
+        console.log("deletion successful")
+      )
+      .catch((e) =>
+        console.log("error while deleting:", e)
+      )
+    laneObjs.splice(i, 1)
+    urls.splice(i, 1)
   }
 
   return (
@@ -124,17 +148,19 @@ const Form = ({ storage, firestore, user }) => {
           value={signOff}
           onChange={(e) => setSignOff(e.target.value)}
         />
-        {urls.map((url, i) =>
-          <div className="memory-lane-images row" key={i}>
-            <img className="col-4" src={url} />
-            <input className="col-7"
-              type="text"
-              value={laneObjs[i] ? laneObjs[i].text : "some text"}
-              onChange={(e) => handleMemoryLane(i, url, e.target.value)}
-            />
-            <div className="col-1"><span>x</span></div>
-          </div>
-        )
+        {
+          laneObjs.map((obj, i) =>
+            <div className="memory-lane-images row" key={obj.url}>
+              <img className="col-4" src={obj.url} />
+              <input className="col-7"
+                type="text"
+                value={obj.text}
+                onChange={(e) => handleMemoryLane(i, obj.url, e.target.value)}
+              />
+              <div className="col-1" onClick={() => handleDelete(i)}>
+                <span>x</span>
+              </div>
+            </div>)
         }
         <label className="file-upload">
           + Add Images
